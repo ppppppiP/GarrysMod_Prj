@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2053796222804122706}
   - component: {fileID: 4363636509333815635}
   - component: {fileID: 1545398139971005711}
-  - component: {fileID: 9126955775904416999}
   m_Layer: 0
   m_Name: SM_DL_Kamera
   m_TagString: Untagged
@@ -107,27 +106,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.8903736, y: 2.4475465, z: 1.8903737}
   m_Center: {x: 0, y: 1.2237732, z: -0.000000059604645}
---- !u!205 &9126955775904416999
-LODGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 196543607694529359}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: -0.000015258789, y: 1.2237797, z: -0.000000059604645}
-  m_Size: 2.4475465
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
-  m_LastLODIsBillboard: 0
-  m_LODs:
-  - screenRelativeHeight: 0.027549347
-    fadeTransitionWidth: 0.21
-    renderers:
-    - renderer: {fileID: 4363636509333815635}
-    - renderer: {fileID: 3837362412936885203}
-    - renderer: {fileID: 0}
-  m_Enabled: 1
 --- !u!1 &7991659789976923666
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,7 +2,7 @@
 using UnityEngine.Events;
 using YG;
 
-public class SimpleOnTriggerEvents: MonoBehaviour
+public class SimpleOnTriggerEvents : MonoBehaviour
 {
     [SerializeField] UnityEvent EOnTriggerEnter;
     [SerializeField] UnityEvent EOnTriggerExit;
@@ -22,9 +22,9 @@ public class SimpleOnTriggerEvents: MonoBehaviour
         {
             isEnter = true;
             EOnTriggerEnter?.Invoke();
-            ButtonEventHandler.instance.SetListener(() => MobileInput()) ;
-            if (YandexGame.EnvironmentData.isMobile)
-                ButtonEventHandler.instance.Enable();
+            //ButtonEventHandler.instance.SetListener(() => MobileInput()) ;
+            //if (YandexGame.EnvironmentData.isMobile)
+            //    ButtonEventHandler.instance.Enable();
         }
     }
 
@@ -34,15 +34,15 @@ public class SimpleOnTriggerEvents: MonoBehaviour
         {
             isEnter = false;
             EOnTriggerExit?.Invoke();
-            ButtonEventHandler.instance.RemoveListener();
-            if(YandexGame.EnvironmentData.isMobile)
-            ButtonEventHandler.instance.Disable();
+            //ButtonEventHandler.instance.RemoveListener();
+            //if(YandexGame.EnvironmentData.isMobile)
+            //ButtonEventHandler.instance.Disable();
         }
     }
 
     private void Update()
     {
-        if(isEnter)
+        if (isEnter)
         {
             if (IsKeyUse)
             {
@@ -52,7 +52,7 @@ public class SimpleOnTriggerEvents: MonoBehaviour
                 }
             }
             EOnTriggerStay?.Invoke();
-            
+
         }
     }
 
@@ -67,11 +67,11 @@ public class SimpleOnTriggerEvents: MonoBehaviour
     public void EOnTriggerEnterVoid()
     {
         EOnTriggerEnter?.Invoke();
-    } 
+    }
     public void EOnTriggerExitVoid()
     {
         EOnTriggerExit?.Invoke();
-    } 
+    }
     public void EOnTriggerStayVoid()
     {
         EOnTriggerStay?.Invoke();

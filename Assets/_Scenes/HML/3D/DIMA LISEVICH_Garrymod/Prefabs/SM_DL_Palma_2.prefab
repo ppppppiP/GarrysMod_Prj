@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 626516974761279343}
   - component: {fileID: 519601566680532811}
   - component: {fileID: 7805666733678321416}
-  - component: {fileID: 1281818267663054779}
   m_Layer: 0
   m_Name: SM_DL_Palma_2
   m_TagString: Untagged
@@ -63,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 554ad7503bfaf5948905b112b711ec85, type: 2}
+  - {fileID: 1670020797688939130, guid: 680b05e3a1f17ff44b8a42caa2efcb5f, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -107,22 +106,3 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 8253369560035560032, guid: 680b05e3a1f17ff44b8a42caa2efcb5f, type: 3}
---- !u!205 &1281818267663054779
-LODGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5614915436215982526}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: 3.7498794, y: 2.1403813, z: 0.00000047683716}
-  m_Size: 1
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
-  m_LastLODIsBillboard: 0
-  m_LODs:
-  - screenRelativeHeight: 0.031152202
-    fadeTransitionWidth: 0.07
-    renderers:
-    - renderer: {fileID: 519601566680532811}
-  m_Enabled: 1
