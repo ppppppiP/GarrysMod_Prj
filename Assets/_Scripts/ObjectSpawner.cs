@@ -34,70 +34,73 @@ public class ObjectSpawner : MonoBehaviour
 
     void Start()
     {
-        // Инициализируем объекты: делаем их изначально неактивными
+        if (objectPrefabs.Count == 0 || objectPrefabs2.Count == 0 || Notices.Count == 0)
+        {
+            Debug.LogError("Один из списков объектов пуст! Пожалуйста, добавьте объекты в инспекторе.");
+            return;
+        }
+
+        if (objectPrefabs2.Count != Notices.Count)
+        {
+            Debug.LogError("Списки objectPrefabs2 и Notices должны иметь одинаковую длину!");
+            return;
+        }
+
         foreach (var obj in objectPrefabs)
         {
             obj.SetActive(false);
         }
 
-        // Запускаем корутины для обоих режимов
         StartCoroutine(SpawnMode1());
         StartCoroutine(SpawnMode2());
     }
 
-    // Корутина для первого режима
     IEnumerator SpawnMode1()
     {
         while (true)
         {
-            // Выбираем случайный объект из списка
             int randomIndex = Random.Range(0, objectPrefabs.Count);
             GameObject selectedObject = objectPrefabs[randomIndex];
 
-            // Активируем объект
             selectedObject.SetActive(true);
-
-            // Ждем заданное время (если интервал больше 0)
             yield return new WaitForSeconds(spawnIntervalMode1);
-
-            // Деактивируем объект после времени его жизни
             yield return new WaitForSeconds(objectLifetimeMode1);
             selectedObject.SetActive(false);
         }
     }
 
-    // Корутина для второго режима
     IEnumerator SpawnMode2()
     {
-        int last = 0;
+        int last = -1;
+
         while (true)
         {
-            int randomIndex = Random.Range(0, objectPrefabs2.Count);
+            int randomIndex;
 
-            while(randomIndex == last) 
-                randomIndex = Random.Range(0, objectPrefabs2.Count);
+            if (objectPrefabs2.Count > 1)
+            {
+                do
+                {
+                    randomIndex = Random.Range(0, objectPrefabs2.Count);
+                } while (randomIndex == last);
+            }
+            else
+            {
+                randomIndex = 0;
+            }
 
             Notices[randomIndex].SetActive(true);
-            // Ждем перед активацией
             yield return new WaitForSeconds(spawnDelayMode2);
 
-            // Выбираем случайный объект из списка
-            
-
             GameObject selectedObject = objectPrefabs2[randomIndex];
-
-            Notices[randomIndex].SetActive(false);
-            // Активируем объект
             selectedObject.SetActive(true);
 
-            // Ждем время жизни объекта
+            Notices[randomIndex].SetActive(false);
             yield return new WaitForSeconds(objectLifetimeMode2);
 
-            // Деактивируем объект
-           
             selectedObject.SetActive(false);
+
             last = randomIndex;
-            // Ждем интервал между активациями
             yield return new WaitForSeconds(spawnIntervalMode2);
         }
     }
