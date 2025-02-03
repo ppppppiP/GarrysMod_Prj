@@ -10,6 +10,8 @@ public class ObjectSpawner : MonoBehaviour
     [Header("СПАВНИМ СОБЫТИЕ НЕ ПОВТОРЯЮЩЕЕСЯ")]
     public List<GameObject> objectPrefabs2;
 
+    public List<GameObject> Notices;
+
     // Время жизни объекта в первом режиме
     [Header("ВРЕМЯ ЖИЗНИ ПРЕФАБА")]
     public float objectLifetimeMode1 = 2f;
@@ -67,15 +69,24 @@ public class ObjectSpawner : MonoBehaviour
     // Корутина для второго режима
     IEnumerator SpawnMode2()
     {
+        int last = 0;
         while (true)
         {
+            int randomIndex = Random.Range(0, objectPrefabs2.Count);
+
+            while(randomIndex == last) 
+                randomIndex = Random.Range(0, objectPrefabs2.Count);
+
+            Notices[randomIndex].SetActive(true);
             // Ждем перед активацией
             yield return new WaitForSeconds(spawnDelayMode2);
 
             // Выбираем случайный объект из списка
-            int randomIndex = Random.Range(0, objectPrefabs2.Count);
+            
+
             GameObject selectedObject = objectPrefabs2[randomIndex];
 
+            Notices[randomIndex].SetActive(false);
             // Активируем объект
             selectedObject.SetActive(true);
 
@@ -83,8 +94,9 @@ public class ObjectSpawner : MonoBehaviour
             yield return new WaitForSeconds(objectLifetimeMode2);
 
             // Деактивируем объект
+           
             selectedObject.SetActive(false);
-
+            last = randomIndex;
             // Ждем интервал между активациями
             yield return new WaitForSeconds(spawnIntervalMode2);
         }
