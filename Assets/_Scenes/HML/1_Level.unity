@@ -7586,6 +7586,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire_Gun
       objectReference: {fileID: 0}
+    - target: {fileID: 3933670071635465480, guid: b2b5a50580d124c2e845ab9cb9012ca6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -36276,6 +36281,7 @@ MonoBehaviour:
   - {fileID: 665427778}
   objectPrefabs2:
   - {fileID: 1862354359}
+  Notices: []
   objectLifetimeMode1: 16
   spawnIntervalMode1: 0
   spawnDelayMode2: 8
@@ -37255,7 +37261,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &776893897
 Transform:
   m_ObjectHideFlags: 0
@@ -40472,6 +40478,7 @@ MonoBehaviour:
   objectPrefabs2:
   - {fileID: 512671989}
   - {fileID: 989506524}
+  Notices: []
   objectLifetimeMode1: 16
   spawnIntervalMode1: 0
   spawnDelayMode2: 8
@@ -48276,7 +48283,7 @@ PrefabInstance:
     - target: {fileID: 8207269424139252347, guid: 5494d0bc4bf24a6448bb2991d2f310d8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -66.5
+      value: -333
       objectReference: {fileID: 0}
     - target: {fileID: 8207269424139252347, guid: 5494d0bc4bf24a6448bb2991d2f310d8,
         type: 3}
@@ -48286,7 +48293,7 @@ PrefabInstance:
     - target: {fileID: 8207269424139252347, guid: 5494d0bc4bf24a6448bb2991d2f310d8,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 132.5
+      value: 72.7
       objectReference: {fileID: 0}
     - target: {fileID: 8207269424139252347, guid: 5494d0bc4bf24a6448bb2991d2f310d8,
         type: 3}
@@ -53553,6 +53560,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Water_Gun
+      objectReference: {fileID: 0}
+    - target: {fileID: 2540033272837726370, guid: 56550f08dfab549948c94123a138bdd5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7655369506217146854, guid: 56550f08dfab549948c94123a138bdd5,
         type: 3}
@@ -69361,7 +69373,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1383164698
 Transform:
   m_ObjectHideFlags: 0
