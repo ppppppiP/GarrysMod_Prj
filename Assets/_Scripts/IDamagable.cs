@@ -1,4 +1,4 @@
 ﻿public interface IDamagable
 {
-    void GetDamage();
+    void GetDamage(float damage);
 }
