@@ -59,7 +59,20 @@ public class ObjectSpawner : MonoBehaviour
     {
         while (true)
         {
-            int randomIndex = Random.Range(0, objectPrefabs.Count);
+            int last = -1;
+            int randomIndex;
+
+            if (objectPrefabs2.Count > 1)
+            {
+                do
+                {
+                    randomIndex = Random.Range(0, objectPrefabs.Count);
+                } while (randomIndex == last);
+            }
+            else
+            {
+                randomIndex = 0;
+            }
             GameObject selectedObject = objectPrefabs[randomIndex];
 
             selectedObject.SetActive(true);

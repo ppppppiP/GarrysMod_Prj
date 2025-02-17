@@ -13,7 +13,7 @@ public class HeathController: MonoBehaviour, IDamagable
         {
             m_playerHelath = 0;
         }
-        if (damage < 0) return;
+     
 
         m_playerHelath -= damage;
         OnChangePlayerHealth?.Invoke(m_playerHelath);
