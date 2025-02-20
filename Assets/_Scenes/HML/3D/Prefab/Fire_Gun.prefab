@@ -10012,7 +10012,6 @@ GameObject:
   - component: {fileID: 2994753539143969524}
   - component: {fileID: 6925847681942143110}
   - component: {fileID: 812382025958826105}
-  - component: {fileID: 6913798013319427416}
   - component: {fileID: 6768158197356546920}
   m_Layer: 0
   m_Name: Fire_Gun
@@ -10109,25 +10108,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -1378061998002599439, guid: 285579db078377b4b81a563a69488679, type: 3}
---- !u!205 &6913798013319427416
-LODGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3933670071635465480}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: -0.079652905, y: 0.26342103, z: -0.000121861696}
-  m_Size: 1
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
-  m_LastLODIsBillboard: 0
-  m_LODs:
-  - screenRelativeHeight: 0.02526635
-    fadeTransitionWidth: 0.14
-    renderers:
-    - renderer: {fileID: 6925847681942143110}
-  m_Enabled: 1
 --- !u!95 &6768158197356546920
 Animator:
   serializedVersion: 5
