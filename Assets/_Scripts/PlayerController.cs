@@ -11,7 +11,13 @@ public class PlayerController : MonoBehaviour
     private CharacterController characterController;
     private Vector3 velocity;
     public bool isGrounded;
+    public bool isHided;
 
+    public static PlayerController instance;
+    private void Awake()
+    {
+        instance = this;
+    }
     void Start()
     {
         characterController = GetComponent<CharacterController>();
