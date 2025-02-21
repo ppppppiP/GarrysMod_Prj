@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 8042710996907036098}
   - component: {fileID: 4968229932790673230}
   - component: {fileID: 9025743994904909895}
+  - component: {fileID: 360421562882082607}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -205,7 +206,21 @@ MonoBehaviour:
       m_Calls: []
   DetectLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1
+--- !u!114 &360421562882082607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7745235837936578642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d251e2c9d763c834397bbdc626afe9af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: -100
+  damageInterval: 1
 --- !u!1001 &6786614643381474174
 PrefabInstance:
   m_ObjectHideFlags: 0
