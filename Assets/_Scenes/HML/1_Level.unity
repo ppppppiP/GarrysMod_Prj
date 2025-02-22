@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18074694, g: 0.22626776, b: 0.30716613, a: 1}
+  m_IndirectSpecularColor: {r: 0.18074739, g: 0.2262684, b: 0.30716717, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -45064,8 +45064,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4187799302799656650, guid: 5494d0bc4bf24a6448bb2991d2f310d8,
         type: 3}
+      propertyPath: OnPlayerDie.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4187799302799656650, guid: 5494d0bc4bf24a6448bb2991d2f310d8,
+        type: 3}
+      propertyPath: OnPlayerDie.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1324450708}
+    - target: {fileID: 4187799302799656650, guid: 5494d0bc4bf24a6448bb2991d2f310d8,
+        type: 3}
       propertyPath: OnPlayerDie.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4187799302799656650, guid: 5494d0bc4bf24a6448bb2991d2f310d8,
+        type: 3}
+      propertyPath: OnPlayerDie.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Teleport
+      objectReference: {fileID: 0}
+    - target: {fileID: 4187799302799656650, guid: 5494d0bc4bf24a6448bb2991d2f310d8,
+        type: 3}
+      propertyPath: OnPlayerDie.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Teleporter, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4187799302799656650, guid: 5494d0bc4bf24a6448bb2991d2f310d8,
+        type: 3}
+      propertyPath: OnPlayerDie.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7603090170825470085, guid: 5494d0bc4bf24a6448bb2991d2f310d8,
         type: 3}
@@ -45137,7 +45162,11 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1906468892}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2109880901437086490, guid: 5494d0bc4bf24a6448bb2991d2f310d8,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1324450708}
   m_SourcePrefab: {fileID: 100100000, guid: 5494d0bc4bf24a6448bb2991d2f310d8, type: 3}
 --- !u!4 &970465405 stripped
 Transform:
@@ -48385,6 +48414,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 922870f9504e6b0438e21b87a73fe631, type: 3}
+--- !u!1 &1031017431
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1031017432}
+  m_Layer: 0
+  m_Name: RespawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1031017432
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031017431}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -282.33, y: -12.2, z: 70.372444}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1031306134 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4734401468729239138, guid: 5aa5858076fbb50448befd8a4bfda32b,
@@ -54492,7 +54552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HealthBar: {fileID: 1173824256}
-  m_HealthController: {fileID: 0}
+  m_HealthController: {fileID: 1324450703}
 --- !u!114 &1173824256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62834,6 +62894,38 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1321277912}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1324450702 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2109880901437086490, guid: 5494d0bc4bf24a6448bb2991d2f310d8,
+    type: 3}
+  m_PrefabInstance: {fileID: 970465404}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1324450703 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4187799302799656650, guid: 5494d0bc4bf24a6448bb2991d2f310d8,
+    type: 3}
+  m_PrefabInstance: {fileID: 970465404}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324450702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a3ec4205407a2d4fb5dccd123286158, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1324450708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324450702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40b366619ea30c44a82de9cda6db3b38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Object: {fileID: 1324450702}
+  m_newPosition: {fileID: 1031017432}
 --- !u!1 &1325190483
 GameObject:
   m_ObjectHideFlags: 0
@@ -105145,11 +105237,12 @@ SceneRoots:
   - {fileID: 466750841}
   - {fileID: 337686356}
   - {fileID: 970465404}
+  - {fileID: 690922314}
   - {fileID: 1513258665}
   - {fileID: 85453358}
   - {fileID: 1410426744}
   - {fileID: 1704897935}
-  - {fileID: 690922314}
   - {fileID: 1053555132}
   - {fileID: 1187226972}
   - {fileID: 700264261}
+  - {fileID: 1031017432}

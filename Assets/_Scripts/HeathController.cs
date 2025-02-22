@@ -20,13 +20,20 @@ public class HeathController: MonoBehaviour, IDamagable
             m_playerHelath = 0;
         }
      
-
+        if(m_playerHelath > maxHealth)
+        {
+            m_playerHelath = maxHealth;
+        }
         m_playerHelath -= damage;
         OnChangePlayerHealth?.Invoke(m_playerHelath);
         if(m_playerHelath <= 0)
         {
+
             OnPlayerDie?.Invoke();
             m_playerHelath = maxHealth;
+            OnChangePlayerHealth?.Invoke(m_playerHelath);
         }
     }
+
+   
 }
