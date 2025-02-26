@@ -1,17 +1,31 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class DamageRain: MonoBehaviour
+public class DamageRain : MonoBehaviour
 {
     public float damage = 10f;
     public float damageInterval = 1f;
-    bool isEnter;
-    private void OnTriggerEnter(Collider other)
+    private Coroutine damageCoroutine;
+
+    private void OnTriggerStay(Collider other)
     {
         if (other.TryGetComponent<IDamagable>(out IDamagable damagable))
         {
-            isEnter = true;
-            StartCoroutine(ApplyDamageOverTime(damagable));
+            if (!PlayerController.instance.isHided)
+            {
+                if (damageCoroutine == null)
+                {
+                    damageCoroutine = StartCoroutine(ApplyDamageOverTime(damagable));
+                }
+            }
+            else
+            {
+                if (damageCoroutine != null)
+                {
+                    StopCoroutine(damageCoroutine);
+                    damageCoroutine = null;
+                }
+            }
         }
     }
 
@@ -19,18 +33,21 @@ public class DamageRain: MonoBehaviour
     {
         if (other.TryGetComponent<IDamagable>(out IDamagable damagable))
         {
-            isEnter = false;
+            if (damageCoroutine != null)
+            {
+                StopCoroutine(damageCoroutine);
+                damageCoroutine = null;
+            }
         }
     }
+
     private IEnumerator ApplyDamageOverTime(IDamagable damagable)
     {
-        float elapsedTime = 0f;
-
-        while (isEnter && !PlayerController.instance.isHided)
+        while (!PlayerController.instance.isHided)
         {
             damagable.GetDamage(damage);
-
             yield return new WaitForSeconds(damageInterval);
         }
+        damageCoroutine = null; // Установите в null, когда корутина завершится
     }
 }
