@@ -25,6 +25,7 @@ public class HeathController: MonoBehaviour, IDamagable
             m_playerHelath = maxHealth;
         }
         m_playerHelath -= damage;
+        CameraEffects.instance.Shake();
         OnChangePlayerHealth?.Invoke(m_playerHelath);
         if(m_playerHelath <= 0)
         {
