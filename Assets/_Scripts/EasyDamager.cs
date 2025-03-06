@@ -9,6 +9,7 @@ public class EasyDamager: MonoBehaviour
         if(other.TryGetComponent<IDamagable>(out IDamagable damagable))
         {
             damagable.GetDamage(Damage);
+            
         }
     }
 }

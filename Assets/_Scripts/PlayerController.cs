@@ -1,9 +1,10 @@
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] float m_MoveSpeed = 5f;
-    [SerializeField] float m_jumpForce = 5f;
+    public float m_MoveSpeed = 5f;
+    public float m_jumpForce = 5f;
     [SerializeField] float m_gravity = -9.81f;
     [SerializeField] Transform m_cameraTransform;
     [SerializeField] float m_rotationSpeed = 10f; // Скорость поворота
@@ -12,7 +13,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 velocity;
     public bool isGrounded;
     public bool isHided;
-
+   
     public static PlayerController instance;
     private void Awake()
     {
@@ -57,13 +58,22 @@ public class PlayerController : MonoBehaviour
         characterController.Move(moveDirection * m_MoveSpeed * Time.deltaTime);
 
         // Прыжок
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetButtonDown("Jump"))
         {
-            velocity.y = Mathf.Sqrt(m_jumpForce * -2f * m_gravity);
+            Jump(m_jumpForce);
         }
 
         // Применение гравитации
         velocity.y += m_gravity * Time.deltaTime;
         characterController.Move(velocity * Time.deltaTime);
+    }
+
+    public void Jump(float force)
+    {
+        if (isGrounded)
+        {
+            CameraEffects.instance.DoJumpFov();
+            velocity.y = Mathf.Sqrt(force * -2f * m_gravity);
+        }
     }
 }
