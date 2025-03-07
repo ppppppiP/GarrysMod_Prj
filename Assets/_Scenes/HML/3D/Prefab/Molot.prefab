@@ -66,6 +66,7 @@ GameObject:
   - component: {fileID: 2727211360077902725}
   - component: {fileID: 6107254649860831933}
   - component: {fileID: 801226143000536712}
+  - component: {fileID: 4971653042607931721}
   m_Layer: 0
   m_Name: molot
   m_TagString: Untagged
@@ -140,6 +141,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4971653042607931721
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4118672882570516552}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.020655114, y: 0.020655112, z: 0.35441443}
+  m_Center: {x: 0.000000003259629, y: 3.724302e-13, z: -0.0021647138}
 --- !u!1 &5223123901226584329
 GameObject:
   m_ObjectHideFlags: 0
@@ -151,6 +173,9 @@ GameObject:
   - component: {fileID: 8216910871282451821}
   - component: {fileID: 9119790231254150139}
   - component: {fileID: 6127994703906305321}
+  - component: {fileID: 8487901825891911676}
+  - component: {fileID: 531191309406153270}
+  - component: {fileID: 7963877883546596770}
   m_Layer: 0
   m_Name: Cube.002 (1)
   m_TagString: Untagged
@@ -223,6 +248,61 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8487901825891911676
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5223123901226584329}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.047088243, y: 0.021626825, z: 0.02162683}
+  m_Center: {x: 0.001083525, y: -0.00000011920929, z: -0.000000012572855}
+--- !u!65 &531191309406153270
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5223123901226584329}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.04, y: 0.021626825, z: 0.02162683}
+  m_Center: {x: 0.005, y: -0.00000011920929, z: -0.000000012572855}
+--- !u!114 &7963877883546596770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5223123901226584329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6da3d33f22d1798409e9753be00e199c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 10
 --- !u!1 &7197143747058481928
 GameObject:
   m_ObjectHideFlags: 0
@@ -235,6 +315,7 @@ GameObject:
   - component: {fileID: 7468086733837162473}
   - component: {fileID: 7714233916417589051}
   - component: {fileID: 1355230420072774081}
+  - component: {fileID: 694234025433080643}
   m_Layer: 0
   m_Name: molot
   m_TagString: Untagged
@@ -329,6 +410,27 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &694234025433080643
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7197143747058481928}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.32989746, y: 0.33569115, z: 0.32989746}
+  m_Center: {x: 0, y: 0.16784558, z: 0}
 --- !u!1 &7563277730420901274
 GameObject:
   m_ObjectHideFlags: 0
