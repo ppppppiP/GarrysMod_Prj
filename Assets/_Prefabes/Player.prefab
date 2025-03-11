@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7603090170825470085}
   - component: {fileID: 2340656021160130159}
   - component: {fileID: 4187799302799656650}
+  - component: {fileID: 2802005705320188897}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -56,6 +57,7 @@ MonoBehaviour:
   m_cameraTransform: {fileID: 0}
   m_rotationSpeed: 10
   isGrounded: 0
+  isHided: 0
 --- !u!114 &2464305760863839061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,6 +137,20 @@ MonoBehaviour:
   OnPlayerDie:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2802005705320188897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2109880901437086490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 070772e84c24e0d44b876ca70782af82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsSuperJumpActive: 0
+  IsSuperSpeedActive: 0
 --- !u!1 &6532181671788769295
 GameObject:
   m_ObjectHideFlags: 0
