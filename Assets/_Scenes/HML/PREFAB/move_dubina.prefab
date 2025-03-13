@@ -239,8 +239,9 @@ GameObject:
   - component: {fileID: 3780087060520756708}
   - component: {fileID: 4196495772167691066}
   - component: {fileID: 6140060279965495899}
+  - component: {fileID: 7856767788601526545}
   m_Layer: 0
-  m_Name: Cone.002 (1)
+  m_Name: Triger Damage Dubina
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -366,6 +367,47 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.14437255, y: 0.08, z: 0.06}
   m_Center: {x: 0.064325795, y: 0.024540154, z: -0.0011811219}
+--- !u!114 &7856767788601526545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7028827931600103967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fee7aa96cd8271419254dbf8154a261, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EOnTriggerEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  EOnTriggerExit:
+    m_PersistentCalls:
+      m_Calls: []
+  EOnTriggerStay:
+    m_PersistentCalls:
+      m_Calls: []
+  key: 0
+  IsKeyUse: 0
+  EOnKeyInTriggerDown:
+    m_PersistentCalls:
+      m_Calls: []
+  DetectLayer:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!1 &7499282482973498090
 GameObject:
   m_ObjectHideFlags: 0
