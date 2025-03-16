@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using Lean.Pool;
+using System.Collections;
+using UnityEngine;
 
 public class Shelter: MonoBehaviour
 {

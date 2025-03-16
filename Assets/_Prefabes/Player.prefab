@@ -37,6 +37,7 @@ Transform:
   m_Children:
   - {fileID: 6899449140211610652}
   - {fileID: 6981416773570953163}
+  - {fileID: 8623973422957510845}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &354821503463044365
@@ -53,6 +54,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MoveSpeed: 17.8
   m_jumpForce: 5
+  m_InAirSpeedMultiplier: 2
   m_gravity: -20.16
   m_cameraTransform: {fileID: 0}
   m_rotationSpeed: 10
@@ -151,6 +153,56 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsSuperJumpActive: 0
   IsSuperSpeedActive: 0
+--- !u!1 &5601831507885059877
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8623973422957510845}
+  - component: {fileID: 5438075639853142007}
+  m_Layer: 0
+  m_Name: MeteorSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8623973422957510845
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5601831507885059877}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8207269424139252347}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5438075639853142007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5601831507885059877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f23b4c4f509891429b5556984f5a341, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meteorPrefab: {fileID: 4847485994156976808, guid: b473474cabb4b4fcbb6aa4867e8738ab,
+    type: 3}
+  spawnHeight: 0.9
+  spawnRadius: 50.2
+  spawnInterval: 1
+  fallDuration: 6.01
 --- !u!1 &6532181671788769295
 GameObject:
   m_ObjectHideFlags: 0
