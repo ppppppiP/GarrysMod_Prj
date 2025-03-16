@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6934208201922342897}
   - component: {fileID: 2053796222804122706}
   - component: {fileID: 4363636509333815635}
+  - component: {fileID: 2789561071569180223}
   m_Layer: 0
   m_Name: SM_DL_Kamera
   m_TagString: Untagged
@@ -84,6 +85,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2789561071569180223
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196543607694529359}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.8903736, y: 2.4475465, z: 1.8903737}
+  m_Center: {x: 0, y: 1.2237732, z: -0.000000059604645}
 --- !u!1 &7991659789976923666
 GameObject:
   m_ObjectHideFlags: 0
