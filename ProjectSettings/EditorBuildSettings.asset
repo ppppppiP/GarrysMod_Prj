@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: Assets/_Scenes/Chips/5 - POLOSA.unity
+    guid: 23471051f641f4848931df7813de882d
   - enabled: 1
-    path: Assets/_Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/_Scenes/Chips/5 - POLOSA 1.unity
+    guid: 4cbe7c4fa34583e4a8dfa85cfebbbd9a
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: e1df9200bdd9b40508eb908c6b3fde6b,
       type: 2}

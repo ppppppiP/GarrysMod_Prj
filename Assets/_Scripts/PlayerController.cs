@@ -5,6 +5,7 @@ public class PlayerController : MonoBehaviour
 {
     public float m_MoveSpeed = 5f;
     public float m_jumpForce = 5f;
+    public float m_InAirSpeedMultiplier = 2f;
     [SerializeField] float m_gravity = -9.81f;
     [SerializeField] Transform m_cameraTransform;
     [SerializeField] float m_rotationSpeed = 10f; // Скорость поворота
@@ -13,7 +14,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 velocity;
     public bool isGrounded;
     public bool isHided;
-   
+    private float deafoulteSpeed;
     public static PlayerController instance;
     private void Awake()
     {
@@ -21,6 +22,7 @@ public class PlayerController : MonoBehaviour
     }
     void Start()
     {
+        deafoulteSpeed = m_InAirSpeedMultiplier;
         characterController = GetComponent<CharacterController>();
     }
 
@@ -54,11 +56,18 @@ public class PlayerController : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, m_rotationSpeed * Time.deltaTime);
         }
 
-        // Движение игрока
-        characterController.Move(moveDirection * m_MoveSpeed * Time.deltaTime);
 
+        // Движение игрока
+        if (isGrounded)
+        {
+            characterController.Move(moveDirection * m_MoveSpeed * Time.deltaTime);
+        }
+        else
+        {
+            characterController.Move(moveDirection * m_MoveSpeed * m_InAirSpeedMultiplier * Time.deltaTime);
+        }
         // Прыжок
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && isGrounded)
         {
             Jump(m_jumpForce);
         }
@@ -70,10 +79,9 @@ public class PlayerController : MonoBehaviour
 
     public void Jump(float force)
     {
-        if (isGrounded)
-        {
+
             CameraEffects.instance.DoJumpFov();
             velocity.y = Mathf.Sqrt(force * -2f * m_gravity);
-        }
+
     }
 }

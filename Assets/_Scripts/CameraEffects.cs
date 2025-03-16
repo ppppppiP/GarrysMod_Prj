@@ -1,3 +1,4 @@
+using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using UnityEngine;
 
@@ -11,6 +12,7 @@ public class CameraEffects : MonoBehaviour
     public static CameraEffects instance;
     private void Awake()
     {
+        _tween.Kill();
        instance = this;
         _defaultFov = _camera.fieldOfView;
     }
@@ -46,9 +48,11 @@ public class CameraEffects : MonoBehaviour
     /// </summary>
     public void DoJumpFov(float jumpFov = 5f, float duration = 1f)
     {
-        float fov = Camera.main.fieldOfView + jumpFov;
         _tween?.Kill();
+        float fov = Camera.main.fieldOfView + jumpFov;
+
         _camera.DOFieldOfView(fov, duration / 2).SetEase(Ease.OutQuad)
-            .OnComplete(() => _camera.DOFieldOfView(fov- jumpFov, duration / 1).SetEase(Ease.InQuad));
+            .OnComplete(() => _camera.DOFieldOfView(fov- jumpFov, 0.3f).SetEase(Ease.InQuad));
+        
     }
 }
