@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2492210290021946904}
   - component: {fileID: 1611710299198895099}
   - component: {fileID: 3243960453819674695}
+  - component: {fileID: -1071474416143887022}
   m_Layer: 0
   m_Name: Wood
   m_TagString: Untagged
@@ -105,3 +106,25 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 58.615265, y: 168.9503, z: 58.1571}
   m_Center: {x: -4.040035, y: -121.946625, z: -141.12198}
+--- !u!114 &-1071474416143887022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6717856021996000640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9aa08448b37524e4dbc8e102d245e194, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  processMesh: 1
+  processAudio: 1
+  processTexture: 1
+  fbxPath: 
+  meshName: 
+  meshAddress: 
+  audioPath: 
+  audioClipName: 
+  texturePath: 
+  textureName: 

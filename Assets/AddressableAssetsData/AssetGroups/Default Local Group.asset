@@ -16,7 +16,169 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 8bf980cdcb65a445b97171c44392b9bc
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 07e7e00cd55ae4d2dbaa287d7da0babf
+    m_Address: S_Rock_02_baseColor
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Texture
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5e023a489fff9417490bba5bd34c1b05
+    m_Address: M_Rock_05_baseColor
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Texture
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c3d1c62e032a64c15974ace7fc8a125c
+    m_Address: S_Rock_05_baseColor
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Texture
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3c414db5b83c74d77afad65958f27349
+    m_Address: L_Rock_02_baseColor
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Texture
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a3289063c70f24fda8258052d0e03c6a
+    m_Address: planks_UVMap_color
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Texture
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3dfbb322ae5f343428d23e97a432f055
+    m_Address: M_Rock_02_baseColor
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Texture
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7aa1ecd48db9d4cb183aa272b25506cf
+    m_Address: L_Rock_05_baseColor
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Texture
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 014f8803f47204a01bcea3d137fe7353
+    m_Address: Rocks
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Mesh
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 58135dc0e108c4d1aa00435fb058305a
+    m_Address: Cube
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Animator
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ebbfca8cb886b45d284a3d2b32be33a0
+    m_Address: move_all 3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Animator
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 01dc04cc0f4db4a749dd5337f24466f9
+    m_Address: move_all 4
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Animator
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 08b326ebc9dba4e77adbf340ad34a60a
+    m_Address: Lava_move_UP_DOWM
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Animator
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 48c540afefc70a6419b5fb1ebb1c0e70
+    m_Address: Player
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Animator
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7233b6ad18e4de943b0dadaf2c3afa89
+    m_Address: BazaGowna
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Mesh
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 285579db078377b4b81a563a69488679
+    m_Address: Props_pirates
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Mesh
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 43f589f87ef994871b311b36a1bcc791
+    m_Address: Water_Gun
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Animator
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a0d733d362d07475d9d4ec9e7d5e36f5
+    m_Address: Coin
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Mesh
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9cb16e73153c244d29f71d2d2da1925a
+    m_Address: Coin1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Animator
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b62221e76c516453fa8548cdf4fd2013
+    m_Address: SM_DL_Pushka (1)
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Animator
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 86697f1f961404736b6bd4a01dd10eda
+    m_Address: move_all_molot 1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Animator
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f6bccefe5daa94d30b8a6c5daab17509
+    m_Address: molot 3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Animator
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5bcdde510f2d84639af3cbc7eb406dc1
+    m_Address: Move_all 5
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Animator
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 91e6acf017f7e4c79bd2c9682d440fd7
+    m_Address: Spears_move
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Animator
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0b872ed6023804f19959c0d3c81b4a35
+    m_Address: SK_Trampoline_Lifebuoy_ao
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Animator
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7468ddb54f5744fc0ae890fa89c53a89
+    m_Address: Raine_v1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Audio
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c667c65b6ff7f4e54914ac50dddf0f81
+    m_Address: Damage
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Audio
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a531e8a7b94844852aa33aa2cec6f56d
+    m_Address: fon_v2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Audio
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 341e2e7ceee9346e5afb9124d15ea585, type: 2}
   m_SchemaSet:

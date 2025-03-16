@@ -69,6 +69,7 @@ GameObject:
   - component: {fileID: 4971653042607931721}
   - component: {fileID: 8520350228764409879}
   - component: {fileID: 638195849656274713}
+  - component: {fileID: 1756567731771660589}
   m_Layer: 0
   m_Name: molot
   m_TagString: Untagged
@@ -198,6 +199,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 10
+--- !u!114 &1756567731771660589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4118672882570516552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9aa08448b37524e4dbc8e102d245e194, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  processMesh: 1
+  processAudio: 1
+  processTexture: 1
+  fbxPath: 
+  meshName: 
+  meshAddress: 
+  audioPath: 
+  audioClipName: 
+  texturePath: 
+  textureName: 
 --- !u!1 &5223123901226584329
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,6 +235,7 @@ GameObject:
   - component: {fileID: 8487901825891911676}
   - component: {fileID: 531191309406153270}
   - component: {fileID: 7963877883546596770}
+  - component: {fileID: 8907499805539881155}
   m_Layer: 0
   m_Name: Cube.002 (1)
   m_TagString: Untagged
@@ -339,6 +363,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 10
+--- !u!114 &8907499805539881155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5223123901226584329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9aa08448b37524e4dbc8e102d245e194, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  processMesh: 1
+  processAudio: 1
+  processTexture: 1
+  fbxPath: 
+  meshName: 
+  meshAddress: 
+  audioPath: 
+  audioClipName: 
+  texturePath: 
+  textureName: 
 --- !u!1 &7197143747058481928
 GameObject:
   m_ObjectHideFlags: 0
@@ -511,6 +557,7 @@ GameObject:
   - component: {fileID: 6421930804782484389}
   - component: {fileID: 1170109576935787804}
   - component: {fileID: 8704004576498645865}
+  - component: {fileID: 4434066274300836772}
   m_Layer: 0
   m_Name: Wood (1)
   m_TagString: Untagged
@@ -604,3 +651,25 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 58.615265, y: 168.9503, z: 58.1571}
   m_Center: {x: -4.040035, y: -121.946625, z: -141.12198}
+--- !u!114 &4434066274300836772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8174193772337052979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9aa08448b37524e4dbc8e102d245e194, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  processMesh: 1
+  processAudio: 1
+  processTexture: 1
+  fbxPath: 
+  meshName: 
+  meshAddress: 
+  audioPath: 
+  audioClipName: 
+  texturePath: 
+  textureName: 

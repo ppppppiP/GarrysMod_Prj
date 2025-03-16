@@ -4556,12 +4556,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 750014288}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &762481200 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2109880901437086490, guid: 5494d0bc4bf24a6448bb2991d2f310d8,
-    type: 3}
-  m_PrefabInstance: {fileID: 4133006812512253611}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &788118476
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9833,26 +9827,12 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 4133006812512253611}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 762481200}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a3ec4205407a2d4fb5dccd123286158, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1853930611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 762481200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 070772e84c24e0d44b876ca70782af82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  IsSuperJumpActive: 0
-  IsSuperSpeedActive: 0
 --- !u!1 &1854895880
 GameObject:
   m_ObjectHideFlags: 0
@@ -12136,11 +12116,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2109880901437086490, guid: 5494d0bc4bf24a6448bb2991d2f310d8,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1853930611}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5494d0bc4bf24a6448bb2991d2f310d8, type: 3}
 --- !u!1001 &4772535135648573682
 PrefabInstance:
