@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 638195849656274713}
   - component: {fileID: 1756567731771660589}
   m_Layer: 0
-  m_Name: molot
+  m_Name: Triger damage molot 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -214,6 +214,7 @@ MonoBehaviour:
   processMesh: 1
   processAudio: 1
   processTexture: 1
+  processAnimator: 1
   fbxPath: 
   meshName: 
   meshAddress: 
@@ -221,6 +222,8 @@ MonoBehaviour:
   audioClipName: 
   texturePath: 
   textureName: 
+  animatorControllerPath: 
+  animatorControllerName: 
 --- !u!1 &5223123901226584329
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,7 +240,7 @@ GameObject:
   - component: {fileID: 7963877883546596770}
   - component: {fileID: 8907499805539881155}
   m_Layer: 0
-  m_Name: Cube.002 (1)
+  m_Name: Triger damage molot 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -378,6 +381,7 @@ MonoBehaviour:
   processMesh: 1
   processAudio: 1
   processTexture: 1
+  processAnimator: 1
   fbxPath: 
   meshName: 
   meshAddress: 
@@ -385,6 +389,8 @@ MonoBehaviour:
   audioClipName: 
   texturePath: 
   textureName: 
+  animatorControllerPath: 
+  animatorControllerName: 
 --- !u!1 &7197143747058481928
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,6 +672,7 @@ MonoBehaviour:
   processMesh: 1
   processAudio: 1
   processTexture: 1
+  processAnimator: 1
   fbxPath: 
   meshName: 
   meshAddress: 
@@ -673,3 +680,5 @@ MonoBehaviour:
   audioClipName: 
   texturePath: 
   textureName: 
+  animatorControllerPath: 
+  animatorControllerName: 

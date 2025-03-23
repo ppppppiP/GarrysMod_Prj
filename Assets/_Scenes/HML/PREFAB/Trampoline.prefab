@@ -383,7 +383,7 @@ PrefabInstance:
     - target: {fileID: 6008673027892981841, guid: e791b4d39769b974db58f71635fe4a85,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.8
+      value: 2.8
       objectReference: {fileID: 0}
     - target: {fileID: 6008673027892981841, guid: e791b4d39769b974db58f71635fe4a85,
         type: 3}
@@ -481,7 +481,7 @@ PrefabInstance:
     - target: {fileID: 641366187438047524, guid: e791b4d39769b974db58f71635fe4a85,
         type: 3}
       propertyPath: m_Name
-      value: Prujina
+      value: Triger Prujina
       objectReference: {fileID: 0}
     - target: {fileID: 1472958159307709906, guid: e791b4d39769b974db58f71635fe4a85,
         type: 3}
@@ -496,17 +496,17 @@ PrefabInstance:
     - target: {fileID: 6008673027892981841, guid: e791b4d39769b974db58f71635fe4a85,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 263.88876
+      value: 238.57779
       objectReference: {fileID: 0}
     - target: {fileID: 6008673027892981841, guid: e791b4d39769b974db58f71635fe4a85,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 35.79483
+      value: 32.361557
       objectReference: {fileID: 0}
     - target: {fileID: 6008673027892981841, guid: e791b4d39769b974db58f71635fe4a85,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 263.88876
+      value: 238.57779
       objectReference: {fileID: 0}
     - target: {fileID: 6008673027892981841, guid: e791b4d39769b974db58f71635fe4a85,
         type: 3}
@@ -516,7 +516,7 @@ PrefabInstance:
     - target: {fileID: 6008673027892981841, guid: e791b4d39769b974db58f71635fe4a85,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 49.9
+      value: 39.3
       objectReference: {fileID: 0}
     - target: {fileID: 6008673027892981841, guid: e791b4d39769b974db58f71635fe4a85,
         type: 3}
@@ -567,6 +567,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 3109421696371568247}
+    - targetCorrespondingSourceObject: {fileID: 641366187438047524, guid: e791b4d39769b974db58f71635fe4a85,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6347537199875499500}
   m_SourcePrefab: {fileID: 100100000, guid: e791b4d39769b974db58f71635fe4a85, type: 3}
 --- !u!1 &1241228540690359983 stripped
 GameObject:
@@ -596,6 +600,35 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &6347537199875499500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241228540690359983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fee7aa96cd8271419254dbf8154a261, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EOnTriggerEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  EOnTriggerExit:
+    m_PersistentCalls:
+      m_Calls: []
+  EOnTriggerStay:
+    m_PersistentCalls:
+      m_Calls: []
+  key: 0
+  IsKeyUse: 0
+  EOnKeyInTriggerDown:
+    m_PersistentCalls:
+      m_Calls: []
+  DetectLayer:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!4 &5385238244308146138 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6008673027892981841, guid: e791b4d39769b974db58f71635fe4a85,
