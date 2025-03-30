@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.343641, g: 0.21866569, b: 0.09593406, a: 1}
+  m_IndirectSpecularColor: {r: 0.5813687, g: 0.36995113, b: 0.16230905, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -775,6 +775,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Coin1 (86)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
@@ -2389,6 +2409,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin1 (98)
       objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -3539,6 +3579,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Coin1 (128)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
@@ -5157,6 +5217,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin1 (83)
       objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -5370,6 +5450,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Coin1 (73)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
@@ -6021,6 +6121,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin1 (107)
       objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -6346,42 +6466,42 @@ PrefabInstance:
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -89.7
+      value: -90.12886
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -63.7
+      value: -63.69998
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -244.5
+      value: -239.29025
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.64615685
+      value: 0.3704352
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.646157
+      value: -0.37043554
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.28719515
+      value: -0.6023102
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.28719547
+      value: -0.6023104
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -89.972
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
@@ -6391,7 +6511,7 @@ PrefabInstance:
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 312.073
+      value: 603.185
       objectReference: {fileID: 0}
     - target: {fileID: 2837916458212766913, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
@@ -6548,6 +6668,7 @@ Transform:
   - {fileID: 1459551022}
   - {fileID: 1631358108}
   - {fileID: 759101563}
+  - {fileID: 828255662}
   - {fileID: 758981701}
   - {fileID: 1156979289}
   - {fileID: 1557289842}
@@ -6593,7 +6714,6 @@ Transform:
   - {fileID: 1801010929}
   - {fileID: 848781535}
   - {fileID: 881766717}
-  - {fileID: 786687125}
   m_Father: {fileID: 549783163}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &288084750
@@ -6608,6 +6728,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Coin1 (71)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
@@ -6703,6 +6843,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Coin1 (84)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
@@ -7797,6 +7957,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin1 (121)
       objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -8010,6 +8190,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin1 (80)
       objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -8098,6 +8298,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Coin1 (97)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
@@ -9131,6 +9351,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin1 (67)
       objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -9436,6 +9676,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Coin1 (95)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
@@ -9949,6 +10209,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Coin1 (102)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
@@ -10478,6 +10758,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin1 (125)
       objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -10757,6 +11057,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Coin1 (85)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
@@ -11217,6 +11537,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin1 (120)
       objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -11388,6 +11728,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Coin1 (103)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
@@ -12463,6 +12823,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin1 (118)
       objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -12806,6 +13186,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Coin1 (123)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
@@ -13662,6 +14062,7 @@ Transform:
   - {fileID: 704782887}
   - {fileID: 1237270759}
   - {fileID: 1298733752}
+  - {fileID: 1426438319}
   m_Father: {fileID: 348005878}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &652185400
@@ -13848,6 +14249,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Coin1 (94)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
@@ -15144,37 +15565,37 @@ PrefabInstance:
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -70.5
+      value: -73.45369
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -79.8
+      value: -79.80002
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -231.6
+      value: -238.03403
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.035276197
+      value: -0.585313
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.035276346
+      value: 0.5853139
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.70622677
+      value: -0.39674732
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.7062258
+      value: -0.39674672
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
@@ -15189,7 +15610,7 @@ PrefabInstance:
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 185.719
+      value: 428.262
       objectReference: {fileID: 0}
     - target: {fileID: 2837916458212766913, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
@@ -15938,42 +16359,42 @@ PrefabInstance:
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -255.3
+      value: -259.37018
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -46.999
+      value: -46.998993
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -75.9
+      value: -84.84317
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.29503417
+      value: -0.6504192
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.29503438
+      value: 0.6504187
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.64261526
+      value: -0.27740812
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.64261585
+      value: -0.277408
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -89.98
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
@@ -15983,7 +16404,7 @@ PrefabInstance:
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 229.321
+      value: 406.197
       objectReference: {fileID: 0}
     - target: {fileID: 2837916458212766913, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
@@ -16027,37 +16448,37 @@ PrefabInstance:
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -154
+      value: -154.66034
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -47.208
+      value: -47.207977
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -124.8
+      value: -134.5477
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.20348904
+      value: -0.69540066
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.20348892
+      value: 0.69540095
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.67719454
+      value: -0.12813161
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.67719424
+      value: -0.1281317
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
@@ -16072,7 +16493,7 @@ PrefabInstance:
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 213.45
+      value: 380.88
       objectReference: {fileID: 0}
     - target: {fileID: 2837916458212766913, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
@@ -16269,6 +16690,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin1 (92)
       objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -16441,6 +16882,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin1 (134)
       objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -16517,95 +16978,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 779302052}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &786687124
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 281772418}
-    m_Modifications:
-    - target: {fileID: 2604199403377835964, guid: 1b09c618781bf4015b22de5faeb1be9e,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 104.697556
-      objectReference: {fileID: 0}
-    - target: {fileID: 2604199403377835964, guid: 1b09c618781bf4015b22de5faeb1be9e,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 136.77968
-      objectReference: {fileID: 0}
-    - target: {fileID: 2604199403377835964, guid: 1b09c618781bf4015b22de5faeb1be9e,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 256.077
-      objectReference: {fileID: 0}
-    - target: {fileID: 2604199403377835964, guid: 1b09c618781bf4015b22de5faeb1be9e,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 38.612
-      objectReference: {fileID: 0}
-    - target: {fileID: 2604199403377835964, guid: 1b09c618781bf4015b22de5faeb1be9e,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -63.509
-      objectReference: {fileID: 0}
-    - target: {fileID: 2604199403377835964, guid: 1b09c618781bf4015b22de5faeb1be9e,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -173.17
-      objectReference: {fileID: 0}
-    - target: {fileID: 2604199403377835964, guid: 1b09c618781bf4015b22de5faeb1be9e,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.45662558
-      objectReference: {fileID: 0}
-    - target: {fileID: 2604199403377835964, guid: 1b09c618781bf4015b22de5faeb1be9e,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.59796447
-      objectReference: {fileID: 0}
-    - target: {fileID: 2604199403377835964, guid: 1b09c618781bf4015b22de5faeb1be9e,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.49220768
-      objectReference: {fileID: 0}
-    - target: {fileID: 2604199403377835964, guid: 1b09c618781bf4015b22de5faeb1be9e,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.43779367
-      objectReference: {fileID: 0}
-    - target: {fileID: 2604199403377835964, guid: 1b09c618781bf4015b22de5faeb1be9e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -77.705
-      objectReference: {fileID: 0}
-    - target: {fileID: 2604199403377835964, guid: 1b09c618781bf4015b22de5faeb1be9e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -200.352
-      objectReference: {fileID: 0}
-    - target: {fileID: 2604199403377835964, guid: 1b09c618781bf4015b22de5faeb1be9e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 117.536
-      objectReference: {fileID: 0}
-    - target: {fileID: 6243853855236326415, guid: 1b09c618781bf4015b22de5faeb1be9e,
-        type: 3}
-      propertyPath: m_Name
-      value: S_Rock_02
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1b09c618781bf4015b22de5faeb1be9e, type: 3}
---- !u!4 &786687125 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2604199403377835964, guid: 1b09c618781bf4015b22de5faeb1be9e,
-    type: 3}
-  m_PrefabInstance: {fileID: 786687124}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &790161401 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5107276667188820072, guid: 46a33c52a03a690419ce7b178ab6df26,
@@ -16624,6 +16996,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Coin1 (127)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
@@ -17464,6 +17856,95 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f4565bae5c2ba24a8d722233dd79623, type: 3}
+--- !u!1001 &828255661
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 281772418}
+    m_Modifications:
+    - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 116.005455
+      objectReference: {fileID: 0}
+    - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 58.924908
+      objectReference: {fileID: 0}
+    - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 111.886604
+      objectReference: {fileID: 0}
+    - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 39.656494
+      objectReference: {fileID: 0}
+    - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -47.19998
+      objectReference: {fileID: 0}
+    - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -170.13925
+      objectReference: {fileID: 0}
+    - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.7052089
+      objectReference: {fileID: 0}
+    - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.70520926
+      objectReference: {fileID: 0}
+    - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.051771045
+      objectReference: {fileID: 0}
+    - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.051771224
+      objectReference: {fileID: 0}
+    - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 368.397
+      objectReference: {fileID: 0}
+    - target: {fileID: 2837916458212766913, guid: 44828066aad0b489d953b048c3cf1974,
+        type: 3}
+      propertyPath: m_Name
+      value: L_Rock_02 (10)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 44828066aad0b489d953b048c3cf1974, type: 3}
+--- !u!4 &828255662 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
+    type: 3}
+  m_PrefabInstance: {fileID: 828255661}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &845343208 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5107276667188820072, guid: 46a33c52a03a690419ce7b178ab6df26,
@@ -18203,6 +18684,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin1 (116)
       objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -18291,6 +18792,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Coin1 (96)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
@@ -18818,6 +19339,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Coin1 (129)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
@@ -19708,6 +20249,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin1 (65)
       objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -20012,6 +20573,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin1 (109)
       objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -20279,6 +20860,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin1 (74)
       objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -20367,6 +20968,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Coin1 (89)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
@@ -20562,6 +21183,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin1 (111)
       objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -20650,6 +21291,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Coin1 (133)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
@@ -20963,13 +21624,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1052794947}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.70710593, y: -0.00000008940696, z: -0.0000022053716, w: 0.7071077}
-  m_LocalPosition: {x: 80.9, y: -114.7, z: 53.3}
+  m_LocalRotation: {x: 0.7030906, y: -0.075246885, z: -0.07524927, w: 0.7030925}
+  m_LocalPosition: {x: 80.900055, y: -114.69998, z: 53.299988}
   m_LocalScale: {x: 56.72562, y: 171.39957, z: 56.72562}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1052907468}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 77.782, y: -89.999, z: -89.999}
 --- !u!23 &1052794950
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21089,6 +21750,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Coin1 (113)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
@@ -21393,6 +22074,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin1 (70)
       objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -21564,6 +22265,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Coin1 (93)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
@@ -21756,13 +22477,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1096500523}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.70710593, y: -0.00000008940696, z: -0.0000022053716, w: 0.7071077}
-  m_LocalPosition: {x: 216.88, y: -128.56, z: -131.7}
+  m_LocalRotation: {x: 0.69574904, y: -0.126219, z: -0.12622097, w: 0.69575167}
+  m_LocalPosition: {x: 216.88004, y: -128.55997, z: -131.69998}
   m_LocalScale: {x: 56.72562, y: 63.67665, z: 56.72562}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1052907468}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 69.435, y: -89.999, z: -89.999}
 --- !u!23 &1096500526
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21865,6 +22586,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Coin1 (75)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
@@ -23817,52 +24558,52 @@ PrefabInstance:
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -311.89
+      value: -315.73547
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -59.665
+      value: -59.067535
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -14.944
+      value: -22.220306
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.3018634
+      value: -0.59880805
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.24315444
+      value: 0.7008464
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.54311746
+      value: -0.31967267
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.7448341
+      value: -0.21920942
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -72.914
+      value: -78.377
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 6.709
+      value: 157.966
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 219.164
+      value: 247.075
       objectReference: {fileID: 0}
     - target: {fileID: 2837916458212766913, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
@@ -24058,6 +24799,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Coin1 (99)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
@@ -24586,6 +25347,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Coin1 (72)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
@@ -25371,6 +26152,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin1 (105)
       objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -25738,6 +26539,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Coin1 (79)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
@@ -26394,6 +27215,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin1 (88)
       objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -26931,6 +27772,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Coin1 (66)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
@@ -29121,6 +29982,86 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1421712696}
   m_CullTransparentMesh: 1
+--- !u!1001 &1426438318
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 645118349}
+    m_Modifications:
+    - target: {fileID: 1458081275729981078, guid: 4b6974860c8df483b8b357f66fb6a145,
+        type: 3}
+      propertyPath: m_Name
+      value: Audio coin
+      objectReference: {fileID: 0}
+    - target: {fileID: 5984419649747028434, guid: 4b6974860c8df483b8b357f66fb6a145,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 273.53223
+      objectReference: {fileID: 0}
+    - target: {fileID: 5984419649747028434, guid: 4b6974860c8df483b8b357f66fb6a145,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -28.766296
+      objectReference: {fileID: 0}
+    - target: {fileID: 5984419649747028434, guid: 4b6974860c8df483b8b357f66fb6a145,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 22.928925
+      objectReference: {fileID: 0}
+    - target: {fileID: 5984419649747028434, guid: 4b6974860c8df483b8b357f66fb6a145,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.27059802
+      objectReference: {fileID: 0}
+    - target: {fileID: 5984419649747028434, guid: 4b6974860c8df483b8b357f66fb6a145,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.27059793
+      objectReference: {fileID: 0}
+    - target: {fileID: 5984419649747028434, guid: 4b6974860c8df483b8b357f66fb6a145,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.6532816
+      objectReference: {fileID: 0}
+    - target: {fileID: 5984419649747028434, guid: 4b6974860c8df483b8b357f66fb6a145,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.6532814
+      objectReference: {fileID: 0}
+    - target: {fileID: 5984419649747028434, guid: 4b6974860c8df483b8b357f66fb6a145,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5984419649747028434, guid: 4b6974860c8df483b8b357f66fb6a145,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5984419649747028434, guid: 4b6974860c8df483b8b357f66fb6a145,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4b6974860c8df483b8b357f66fb6a145, type: 3}
+--- !u!4 &1426438319 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5984419649747028434, guid: 4b6974860c8df483b8b357f66fb6a145,
+    type: 3}
+  m_PrefabInstance: {fileID: 1426438318}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1426438320 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4216110013668226121, guid: 4b6974860c8df483b8b357f66fb6a145,
+    type: 3}
+  m_PrefabInstance: {fileID: 1426438318}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1430704210
 GameObject:
   m_ObjectHideFlags: 0
@@ -32647,6 +33588,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin1 (108)
       objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -33351,37 +34312,37 @@ PrefabInstance:
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -61.8
+      value: -58.340454
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -76.344
+      value: -76.344025
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -149.7
+      value: -157.32346
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.0070525706
+      value: -0.70117295
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.007052481
+      value: 0.70117295
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.70707166
+      value: 0.091413975
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.7070716
+      value: 0.091413945
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
@@ -33396,7 +34357,7 @@ PrefabInstance:
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 181.143
+      value: 345.144
       objectReference: {fileID: 0}
     - target: {fileID: 2837916458212766913, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
@@ -34143,6 +35104,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin1 (87)
       objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -34314,6 +35295,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Coin1 (106)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
@@ -34524,6 +35525,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin1 (124)
       objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -34729,6 +35750,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin1 (114)
       objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -34817,6 +35858,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Coin1 (76)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
@@ -36157,6 +37218,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin1 (110)
       objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -37160,6 +38241,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin1 (131)
       objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -37677,6 +38778,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin1 (78)
       objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -37779,13 +38900,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1814722497}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.70710593, y: -0.00000008940696, z: -0.0000022053716, w: 0.7071077}
-  m_LocalPosition: {x: 216.6, y: -128.62, z: 216.7}
+  m_LocalRotation: {x: 0.69450057, y: -0.13291727, z: -0.13291956, w: 0.694503}
+  m_LocalPosition: {x: 216.6, y: -128.62003, z: 216.69998}
   m_LocalScale: {x: 56.72562, y: 63.67665, z: 56.72562}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1052907468}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 68.331, y: -89.999, z: -90}
 --- !u!23 &1814722500
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -37953,6 +39074,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Coin1 (101)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
@@ -38252,13 +39393,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1890707189}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.70710593, y: -0.00000008940696, z: -0.0000022053716, w: 0.7071077}
-  m_LocalPosition: {x: 217.17, y: -145.12, z: 29.4}
+  m_LocalRotation: {x: 0.67802227, y: -0.20070751, z: -0.20071006, w: 0.678025}
+  m_LocalPosition: {x: 217.17001, y: -145.12003, z: 29.399994}
   m_LocalScale: {x: 56.72562, y: 63.67665, z: 56.72562}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1052907468}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 57.02, y: -90, z: -90}
 --- !u!23 &1890707192
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -38534,6 +39675,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin1 (68)
       objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -38706,6 +39867,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin1 (91)
       objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -38794,6 +39975,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Coin1 (126)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
@@ -39541,6 +40742,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin1 (115)
       objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -39938,6 +41159,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin1 (100)
       objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -40151,6 +41392,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Coin1 (90)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
@@ -40489,6 +41750,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin1 (117)
       objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -40697,37 +41978,37 @@ PrefabInstance:
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 60
+      value: 60.192825
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -99.9
+      value: -99.899994
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -209.9
+      value: -203.55447
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.6939755
+      value: -0.037230786
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.6939754
+      value: 0.037230995
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.13563967
+      value: 0.70612603
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.13563956
+      value: 0.7061259
       objectReference: {fileID: 0}
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
@@ -40742,7 +42023,7 @@ PrefabInstance:
     - target: {fileID: 889861506520946808, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 22.118
+      value: 186.036
       objectReference: {fileID: 0}
     - target: {fileID: 2837916458212766913, guid: 44828066aad0b489d953b048c3cf1974,
         type: 3}
@@ -40772,6 +42053,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Coin1 (132)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
@@ -40861,6 +42162,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Coin1 (122)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
@@ -41039,6 +42360,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Coin1 (69)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
@@ -41342,6 +42683,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Coin1 (81)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
@@ -41976,6 +43337,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin1 (119)
       objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -42147,6 +43528,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Coin1 (130)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
@@ -42520,6 +43921,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin1 (77)
       objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -42847,6 +44268,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Coin1 (82)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
@@ -43603,6 +45044,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin1 (104)
       objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -43691,6 +45152,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Coin1 (112)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1426438320}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967544608673214039, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
+        type: 3}
+      propertyPath: EOnTriggerEnter.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2415899532712511001, guid: dd1f126003dc54d9a885b5ebb3e0d87f,
         type: 3}
