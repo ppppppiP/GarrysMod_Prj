@@ -70,7 +70,7 @@ public class MeteorSpawner : MonoBehaviour
         // Определяем высоту земли в данной позиции с помощью лучевого просчёта
         Vector3 rayStart = new Vector3(targetX, 1000f, targetZ);
         RaycastHit hit;
-        if (Physics.Raycast(rayStart, Vector3.down, out hit, Mathf.Infinity))
+        if (Physics.Raycast(rayStart, Vector3.down, out hit, Mathf.Infinity, ~0, QueryTriggerInteraction.Ignore))
         {
             float groundY = hit.point.y;
             // Спавним метеорит на расстоянии spawnHeight над найденной землей
