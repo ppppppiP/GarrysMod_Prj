@@ -27,6 +27,7 @@ Material:
   m_ValidKeywords:
   - _ALPHAPREMULTIPLY_ON
   - _ALPHATEST_ON
+  - _DETAIL_MULX2
   - _EMISSION
   - _RECEIVE_SHADOWS_OFF
   - _SURFACE_TYPE_TRANSPARENT
@@ -45,8 +46,8 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: dcb77a20843bc4041b15cc8491621b28, type: 3}
-        m_Scale: {x: 6.5, y: 89.77}
+        m_Texture: {fileID: 2800000, guid: 54161c559cfa6417195eb4cba01d9fbc, type: 3}
+        m_Scale: {x: 12.91, y: 6.9}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
@@ -61,16 +62,16 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailNormalMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: d03973d0c94c147f2a6abc3f26e460bc, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 2800000, guid: dcb77a20843bc4041b15cc8491621b28, type: 3}
+        m_Texture: {fileID: 2800000, guid: 54161c559cfa6417195eb4cba01d9fbc, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: dcb77a20843bc4041b15cc8491621b28, type: 3}
-        m_Scale: {x: 6.5, y: 89.77}
+        m_Texture: {fileID: 2800000, guid: 54161c559cfa6417195eb4cba01d9fbc, type: 3}
+        m_Scale: {x: 12.91, y: 6.9}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
