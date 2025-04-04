@@ -117,7 +117,6 @@ GameObject:
   - component: {fileID: 7014372979670350938}
   - component: {fileID: 7920867657033361135}
   - component: {fileID: 360401878235229546}
-  - component: {fileID: 5630433414791114673}
   - component: {fileID: 785793170201746682}
   m_Layer: 0
   m_Name: Water_Gun
@@ -217,25 +216,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -1378061998002599439, guid: 285579db078377b4b81a563a69488679, type: 3}
---- !u!205 &5630433414791114673
-LODGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2540033272837726370}
-  serializedVersion: 2
-  m_LocalReferencePoint: {x: -0.079652905, y: 0.26342103, z: -0.000121861696}
-  m_Size: 1
-  m_FadeMode: 0
-  m_AnimateCrossFading: 0
-  m_LastLODIsBillboard: 0
-  m_LODs:
-  - screenRelativeHeight: 0.02526635
-    fadeTransitionWidth: 0.14
-    renderers:
-    - renderer: {fileID: 7920867657033361135}
-  m_Enabled: 1
 --- !u!95 &785793170201746682
 Animator:
   serializedVersion: 5

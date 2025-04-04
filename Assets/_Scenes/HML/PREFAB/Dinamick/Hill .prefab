@@ -15049,7 +15049,7 @@ GameObject:
   - component: {fileID: 2734186326036708166}
   - component: {fileID: 2210779483916457299}
   m_Layer: 0
-  m_Name: Triger
+  m_Name: Triger Hill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

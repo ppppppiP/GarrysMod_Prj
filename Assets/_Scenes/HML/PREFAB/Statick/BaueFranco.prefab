@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4330792990029871154}
   - component: {fileID: 8976555789882690863}
   - component: {fileID: 2072483598441854584}
-  - component: {fileID: 3142447232990767970}
+  - component: {fileID: 6080547065377997951}
   m_Layer: 0
   m_Name: BaueFranco
   m_TagString: Untagged
@@ -84,8 +84,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &3142447232990767970
-MeshCollider:
+--- !u!65 &6080547065377997951
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -102,7 +102,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -427045069731158668, guid: f449fad48604843f0a1ddb2c6d84d6ee, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 3.6412706, y: 2.5872977, z: 6.6253443}
+  m_Center: {x: 0, y: 0.15028708, z: 2.3126724}
