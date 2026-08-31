@@ -3,8 +3,8 @@ using UnityEngine;
 public class FloaterObject : MonoBehaviour
 {
     private Rigidbody rb;
-    public float floatStrength = 1.5f; // Усиление всплытия
-    private int waterTriggersCount = 0; // Количество пересечений с водой
+    public float floatStrength = 1.5f; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
+    private int waterTriggersCount = 0; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ
     private float waterLevel = 0f;
 
     private void Start()
@@ -18,8 +18,8 @@ public class FloaterObject : MonoBehaviour
         {
             waterTriggersCount++;
             UpdateWaterLevel();
-            rb.drag = 1f;
-            rb.angularDrag = 1f;
+            rb.linearDamping = 1f;
+            rb.angularDamping = 1f;
         }
     }
 
@@ -31,8 +31,8 @@ public class FloaterObject : MonoBehaviour
             if (waterTriggersCount <= 0)
             {
                 waterTriggersCount = 0;
-                rb.drag = 0f;
-                rb.angularDrag = 0f;
+                rb.linearDamping = 0f;
+                rb.angularDamping = 0f;
             }
             UpdateWaterLevel();
         }
@@ -40,7 +40,7 @@ public class FloaterObject : MonoBehaviour
 
     private void UpdateWaterLevel()
     {
-        // Находим максимальную высоту среди всех триггеров воды, в которых находится объект
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ, пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
         Collider[] waterTriggers = Physics.OverlapSphere(transform.position, 5f, LayerMask.GetMask("Water"));
         if (waterTriggers.Length > 0)
         {

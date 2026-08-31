@@ -40,7 +40,7 @@ public class BoatController : MonoBehaviour
 
         AdjustBoatRotation();
 
-        rb.velocity *= 0.99f;
+        rb.linearVelocity *= 0.99f;
         rb.angularVelocity *= 0.98f;
     }
 
