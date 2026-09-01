@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 182814126805039704}
   - component: {fileID: 3144634235792676580}
   - component: {fileID: 5863676625526604176}
-  - component: {fileID: 1513909117915716900}
+  - component: {fileID: 3796054697074285325}
   m_Layer: 0
   m_Name: perila v1
   m_TagString: Untagged
@@ -222,6 +222,7 @@ MonoBehaviour:
     RefIds:
     - rid: 1975137572070096932
       type: {class: Cube, ns: UnityEngine.ProBuilder.Shapes, asm: Unity.ProBuilder}
+      data: 
 --- !u!23 &3144634235792676580
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -239,6 +240,11 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -260,9 +266,11 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &5863676625526604176
 MeshFilter:
@@ -272,8 +280,8 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8594017231241571021}
   m_Mesh: {fileID: 0}
---- !u!64 &1513909117915716900
-MeshCollider:
+--- !u!65 &3796054697074285325
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -290,7 +298,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 3
+  m_Size: {x: 1.8640879, y: 5.649982, z: 1.5322524}
+  m_Center: {x: -0.93189734, y: 2.8249938, z: -0.7659946}

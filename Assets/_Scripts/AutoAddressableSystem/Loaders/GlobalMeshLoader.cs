@@ -9,7 +9,9 @@ public class GlobalMeshLoader : MonoBehaviour
 {
     public IEnumerator LoadMeshesForAutoAddressable()
     {
-        AutoAddressableProcessData[] autoObjs = GameObject.FindObjectsOfType<AutoAddressableProcessData>(true);
+        AutoAddressableProcessData[] autoObjs = GameObject.FindObjectsByType<AutoAddressableProcessData>(
+            FindObjectsInactive.Include,
+            FindObjectsSortMode.None);
         foreach (AutoAddressableProcessData obj in autoObjs)
         {
             if (obj.processMesh)

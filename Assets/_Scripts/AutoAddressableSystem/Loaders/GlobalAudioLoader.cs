@@ -8,7 +8,9 @@ public class GlobalAudioLoader : MonoBehaviour
  
     public IEnumerator LoadAudioForAutoAddressable()
     {
-        AutoAddressableProcessData[] autoObjs = GameObject.FindObjectsOfType<AutoAddressableProcessData>(true);
+        AutoAddressableProcessData[] autoObjs = GameObject.FindObjectsByType<AutoAddressableProcessData>(
+            FindObjectsInactive.Include,
+            FindObjectsSortMode.None);
         foreach (AutoAddressableProcessData autoAddr in autoObjs)
         {
             if (autoAddr.processAudio)
