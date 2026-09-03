@@ -29,6 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/Chips/6 - CANION.unity
     guid: 95beda17b7a493949bb605e7d9679b27
+  - enabled: 1
+    path: Assets/_Scenes/Chips/7 - JUNGLE RUN.unity
+    guid: e2fe00db15be99241b8ab594898a0690
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: e1df9200bdd9b40508eb908c6b3fde6b,
       type: 2}
