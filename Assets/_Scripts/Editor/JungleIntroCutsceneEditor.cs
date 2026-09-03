@@ -15,7 +15,7 @@ public sealed class JungleIntroCutsceneEditor : Editor
             "1. Нажми «ПОКАЗАТЬ ВСЮ КАТСЦЕНУ».\n" +
             "2. Двигай крупные оранжевые точки пути камня.\n" +
             "3. Двигай и вращай голубые точки камеры.\n" +
-            "Все изменения сразу сохраняются в сцене.",
+            "Camera Transition Delay задаёт момент перехода к игроку независимо от камня.",
             MessageType.Info);
 
         GUI.backgroundColor = new Color(0.35f, 0.85f, 1f);
@@ -128,14 +128,15 @@ public sealed class JungleIntroCutsceneEditor : Editor
     {
         if (!HasPoints(cutscene)) return;
 
-        float boulderShare = cutscene.boulderRollDuration / Mathf.Max(0.01f, cutscene.boulderRollDuration + cutscene.cameraTransitionDuration);
-        float boulderT = cutscene.boulderMotion.Evaluate(Mathf.Clamp01(preview / Mathf.Max(0.01f, boulderShare)));
+        float previewDuration = Mathf.Max(0.01f, cutscene.cameraTransitionDelay + cutscene.cameraTransitionDuration);
+        float elapsed = preview * previewDuration;
+        float boulderT = cutscene.boulderMotion.Evaluate(Mathf.Clamp01(elapsed / Mathf.Max(0.01f, cutscene.boulderRollDuration)));
         Vector3 boulderPosition = Bezier(cutscene.boulderStart.position, cutscene.boulderMiddle.position, cutscene.boulderEnd.position, boulderT);
         Handles.color = Color.yellow;
         Handles.SphereHandleCap(0, boulderPosition, Quaternion.identity, HandleUtility.GetHandleSize(boulderPosition) * 0.28f, EventType.Repaint);
         Handles.Label(boulderPosition + Vector3.up * 0.6f, "ПРЕДПРОСМОТР КАМНЯ", EditorStyles.whiteBoldLabel);
 
-        float cameraT = preview <= boulderShare ? 0f : cutscene.cameraMotion.Evaluate(Mathf.InverseLerp(boulderShare, 1f, preview));
+        float cameraT = cutscene.cameraMotion.Evaluate(Mathf.Clamp01((elapsed - cutscene.cameraTransitionDelay) / Mathf.Max(0.01f, cutscene.cameraTransitionDuration)));
         Vector3 cameraPosition = Vector3.Lerp(cutscene.cameraStart.position, cutscene.cameraGameplay.position, cameraT);
         Quaternion cameraRotation = Quaternion.Slerp(cutscene.cameraStart.rotation, cutscene.cameraGameplay.rotation, cameraT);
         Handles.color = Color.green;

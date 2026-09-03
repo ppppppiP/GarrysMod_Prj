@@ -155,10 +155,11 @@ MonoBehaviour:
   introSlope: {fileID: 1451285502}
   cameraStart: {fileID: 123190965}
   cameraGameplay: {fileID: 2005838182}
-  lookAtBoulderDuringRoll: 0
+  lookAtBoulderDuringRoll: 1
   cameraLookHeight: 0.5
-  boulderRollDuration: 2.2
-  cameraTransitionDuration: 1.4
+  boulderRollDuration: 2.41
+  cameraTransitionDelay: 0.55
+  cameraTransitionDuration: 1.15
   emptyRoadDuration: 4
   boulderMotion:
     serializedVersion: 2
@@ -251,13 +252,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 123190964}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.093503326, y: -0.6689102, z: 0.0853886, w: 0.7324787}
-  m_LocalPosition: {x: 7.5, y: 8.8, z: 5.5}
+  m_LocalRotation: {x: 0.078916945, y: -0.7757436, z: 0.099026226, w: 0.6182135}
+  m_LocalPosition: {x: 12.82, y: 8.8, z: -13.57}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 670311245}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 14.549, y: -102.895, z: 0}
 --- !u!1 &411171247
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,7 +548,7 @@ Transform:
   m_GameObject: {fileID: 1060119644}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 10.56, y: 0, z: -21.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -746,6 +747,11 @@ PrefabInstance:
       propertyPath: m_TextStyleHashCode
       value: -1183493901
       objectReference: {fileID: 0}
+    - target: {fileID: 8315974890103521591, guid: 2eb359ee01041cc449cf030619406f2c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 7.000061
+      objectReference: {fileID: 0}
     - target: {fileID: 8768100117121205251, guid: 2eb359ee01041cc449cf030619406f2c,
         type: 3}
       propertyPath: m_TextStyleHashCode
@@ -790,7 +796,7 @@ PrefabInstance:
     - target: {fileID: 7842004560093790563, guid: 48538c46a3bd9354497e81d7ff333a32,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.793472
+      value: 1.7665281
       objectReference: {fileID: 0}
     - target: {fileID: 7842004560093790563, guid: 48538c46a3bd9354497e81d7ff333a32,
         type: 3}
@@ -800,7 +806,7 @@ PrefabInstance:
     - target: {fileID: 7842004560093790563, guid: 48538c46a3bd9354497e81d7ff333a32,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.48368
+      value: -15.42632
       objectReference: {fileID: 0}
     - target: {fileID: 7842004560093790563, guid: 48538c46a3bd9354497e81d7ff333a32,
         type: 3}

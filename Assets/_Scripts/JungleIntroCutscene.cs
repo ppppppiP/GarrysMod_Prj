@@ -22,6 +22,8 @@ public sealed class JungleIntroCutscene : MonoBehaviour
 
     [Header("Timing")]
     [Min(0.1f)] public float boulderRollDuration = 2.2f;
+    [Tooltip("Delay from the beginning of the intro before the camera starts moving to the player.")]
+    [Min(0f)] public float cameraTransitionDelay = 0.45f;
     [Min(0.1f)] public float cameraTransitionDuration = 1.4f;
     [Min(0f)] public float emptyRoadDuration = 4f;
 
@@ -60,15 +62,20 @@ public sealed class JungleIntroCutscene : MonoBehaviour
             Vector3 second = Vector3.Lerp(boulderMiddle.position, boulderEnd.position, t);
             targetBoulder.position = Vector3.Lerp(first, second, t);
             targetBoulder.Rotate(Vector3.right, boulderRotationSpeed * Time.unscaledDeltaTime, Space.Self);
-            if (lookAtBoulderDuringRoll)
+            if (lookAtBoulderDuringRoll && elapsed < cameraTransitionDelay)
             {
                 Vector3 target = targetBoulder.position + Vector3.up * cameraLookHeight;
                 targetCamera.transform.rotation = Quaternion.LookRotation(target - targetCamera.transform.position);
             }
-            return false;
+        }
+        else
+        {
+            targetBoulder.SetPositionAndRotation(boulderEnd.position, boulderEnd.rotation);
         }
 
-        float normalized = Mathf.Clamp01((elapsed - boulderRollDuration) / cameraTransitionDuration);
+        if (elapsed < cameraTransitionDelay) return false;
+
+        float normalized = Mathf.Clamp01((elapsed - cameraTransitionDelay) / cameraTransitionDuration);
         float tCamera = cameraMotion.Evaluate(normalized);
         targetCamera.transform.position = Vector3.Lerp(cameraStart.position, cameraGameplay.position, tCamera);
         targetCamera.transform.rotation = Quaternion.Slerp(cameraStart.rotation, cameraGameplay.rotation, tCamera);
