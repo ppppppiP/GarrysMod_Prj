@@ -158,7 +158,7 @@ MonoBehaviour:
   lookAtBoulderDuringRoll: 1
   cameraLookHeight: 0.5
   boulderRollDuration: 2.41
-  cameraTransitionDelay: 0.55
+  cameraTransitionDelay: 1.06
   cameraTransitionDuration: 1.15
   emptyRoadDuration: 4
   boulderMotion:
@@ -750,7 +750,7 @@ PrefabInstance:
     - target: {fileID: 8315974890103521591, guid: 2eb359ee01041cc449cf030619406f2c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 7.000061
+      value: 7.000183
       objectReference: {fileID: 0}
     - target: {fileID: 8768100117121205251, guid: 2eb359ee01041cc449cf030619406f2c,
         type: 3}
