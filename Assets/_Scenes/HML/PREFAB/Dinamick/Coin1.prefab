@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7291597814532264338}
   - component: {fileID: 7724008840626791567}
   - component: {fileID: 1294700504605805010}
-  - component: {fileID: 3555366948462302430}
+  - component: {fileID: 2417130684367083805}
   m_Layer: 0
   m_Name: Coin_model
   m_TagString: Untagged
@@ -59,6 +59,11 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -80,31 +85,26 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &3555366948462302430
-Animator:
-  serializedVersion: 5
+--- !u!114 &2417130684367083805
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 373893769870706716}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9cb16e73153c244d29f71d2d2da1925a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7634a6853d0549246a2b1f65c044dd4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LightweightRotator
+  localAxis: {x: 0, y: 0, z: 1}
+  degreesPerSecond: 30.465445
 --- !u!1 &432267420191186832
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,7 +137,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2033228769108359671}
-  - {fileID: 1538466707104962295}
   - {fileID: 7291597814532264338}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -166,6 +165,11 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -187,9 +191,11 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &2702353849166053177
 GameObject:
@@ -204,6 +210,7 @@ GameObject:
   - component: {fileID: 1130388645779907384}
   - component: {fileID: 769557888120259652}
   - component: {fileID: 1967544608673214039}
+  - component: {fileID: 2748395962200965817}
   m_Layer: 0
   m_Name: coin_triger
   m_TagString: Untagged
@@ -251,6 +258,11 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -272,9 +284,11 @@ MeshRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!136 &769557888120259652
 CapsuleCollider:
@@ -314,10 +328,10 @@ MonoBehaviour:
   EOnTriggerEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1538466707104962288}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 2748395962200965817}
+        m_TargetAssemblyTypeName: PooledParticleEffectEmitter, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -376,108 +390,24 @@ MonoBehaviour:
   DetectLayer:
     serializedVersion: 2
     m_Bits: 1
---- !u!1001 &5724494252530058829
-PrefabInstance:
+--- !u!114 &2748395962200965817
+MonoBehaviour:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 2415899532712511001}
-    m_Modifications:
-    - target: {fileID: 6496660581575053498, guid: 6bba270f8f35e1541a95abe10ad620a4,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.010079001
-      objectReference: {fileID: 0}
-    - target: {fileID: 6496660581575053498, guid: 6bba270f8f35e1541a95abe10ad620a4,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.010079001
-      objectReference: {fileID: 0}
-    - target: {fileID: 6496660581575053498, guid: 6bba270f8f35e1541a95abe10ad620a4,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.010078999
-      objectReference: {fileID: 0}
-    - target: {fileID: 6496660581575053498, guid: 6bba270f8f35e1541a95abe10ad620a4,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6496660581575053498, guid: 6bba270f8f35e1541a95abe10ad620a4,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6496660581575053498, guid: 6bba270f8f35e1541a95abe10ad620a4,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6496660581575053498, guid: 6bba270f8f35e1541a95abe10ad620a4,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6496660581575053498, guid: 6bba270f8f35e1541a95abe10ad620a4,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6496660581575053498, guid: 6bba270f8f35e1541a95abe10ad620a4,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6496660581575053498, guid: 6bba270f8f35e1541a95abe10ad620a4,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6496660581575053498, guid: 6bba270f8f35e1541a95abe10ad620a4,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6496660581575053498, guid: 6bba270f8f35e1541a95abe10ad620a4,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6496660581575053498, guid: 6bba270f8f35e1541a95abe10ad620a4,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6496660581575053499, guid: 6bba270f8f35e1541a95abe10ad620a4,
-        type: 3}
-      propertyPath: stopAction
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6496660581575053501, guid: 6bba270f8f35e1541a95abe10ad620a4,
-        type: 3}
-      propertyPath: m_Name
-      value: HCFX_Flash_05
-      objectReference: {fileID: 0}
-    - target: {fileID: 6496660581575053501, guid: 6bba270f8f35e1541a95abe10ad620a4,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6bba270f8f35e1541a95abe10ad620a4, type: 3}
---- !u!1 &1538466707104962288 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6496660581575053501, guid: 6bba270f8f35e1541a95abe10ad620a4,
-    type: 3}
-  m_PrefabInstance: {fileID: 5724494252530058829}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1538466707104962295 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6496660581575053498, guid: 6bba270f8f35e1541a95abe10ad620a4,
+  m_GameObject: {fileID: 2702353849166053177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e36f0e41843fb2941b9febd5a462ff2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PooledParticleEffectEmitter
+  effectPrefab: {fileID: 6496660581575053501, guid: 6bba270f8f35e1541a95abe10ad620a4,
     type: 3}
-  m_PrefabInstance: {fileID: 5724494252530058829}
-  m_PrefabAsset: {fileID: 0}
+  overrideMaterial: {fileID: 2100000, guid: 10cd91013f1a3b548961d6a99d6d965e, type: 2}
+  localPosition: {x: 1.2843851e-11, y: -0.00042836764, z: 1.64412e-10}
+  localEulerAngles: {x: 90, y: 0.000010400973, z: 0}
+  localScale: {x: 0.15183416, y: 0.1518342, z: 0.15183415}
+  visibilityScale: 0.25
+  maxPoolSize: 8
+  prewarmCount: 2

@@ -9,7 +9,9 @@ public class GlobalAnimatorLoader : MonoBehaviour
 
     public IEnumerator LoadAnimatorsForAutoAddressable()
     {
-        AutoAddressableProcessData[] autoObjs = GameObject.FindObjectsOfType<AutoAddressableProcessData>(true);
+        AutoAddressableProcessData[] autoObjs = GameObject.FindObjectsByType<AutoAddressableProcessData>(
+            FindObjectsInactive.Include,
+            FindObjectsSortMode.None);
         foreach (AutoAddressableProcessData autoAddr in autoObjs)
         {
             if (autoAddr.processAnimator)
@@ -22,6 +24,13 @@ public class GlobalAnimatorLoader : MonoBehaviour
     private IEnumerator LoadAndAssignAnimator(AutoAddressableProcessData autoAddr)
     {
         GameObject go = autoAddr.gameObject;
+        Animator animator = autoAddr.GetComponent<Animator>();
+        if (animator == null)
+        {
+            autoAddr.processAnimator = false;
+            yield break;
+        }
+
         bool wasActive = go.activeSelf;
         if (!wasActive)
             go.SetActive(true);
@@ -41,7 +50,6 @@ public class GlobalAnimatorLoader : MonoBehaviour
         if (handle.Status == AsyncOperationStatus.Succeeded)
         {
             RuntimeAnimatorController controller = handle.Result;
-            Animator animator = autoAddr.GetComponent<Animator>();
             if (animator != null)
             {
                 animator.runtimeAnimatorController = controller;

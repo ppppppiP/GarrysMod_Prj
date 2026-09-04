@@ -9,6 +9,7 @@ public class Prujina : MonoBehaviour
         if (other.TryGetComponent<PlayerController>(out PlayerController baff))
         {
             baff.Jump(Strength);
+            baff.GetComponent<PlayerAnimator>()?.NotifyJump();
         }
     }
 

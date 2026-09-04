@@ -59,7 +59,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 25
+  m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -570,6 +570,11 @@ PrefabInstance:
       propertyPath: m_text
       value: "\u041F\u0440\u044B\u0436"
       objectReference: {fileID: 0}
+    - target: {fileID: 6009644316996739879, guid: 4b87b30e375f80a4fb84a00f385694c1,
+        type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
     - target: {fileID: 8488204881404743513, guid: 4b87b30e375f80a4fb84a00f385694c1,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -738,6 +743,11 @@ PrefabInstance:
       propertyPath: m_text
       value: "\u041A\u0440\u044B\u043B"
       objectReference: {fileID: 0}
+    - target: {fileID: 6009644316996739879, guid: 4b87b30e375f80a4fb84a00f385694c1,
+        type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
     - target: {fileID: 8488204881404743513, guid: 4b87b30e375f80a4fb84a00f385694c1,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -905,6 +915,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_text
       value: "\u0421\u043A\u043E\u0440"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6009644316996739879, guid: 4b87b30e375f80a4fb84a00f385694c1,
+        type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
       objectReference: {fileID: 0}
     - target: {fileID: 8488204881404743513, guid: 4b87b30e375f80a4fb84a00f385694c1,
         type: 3}

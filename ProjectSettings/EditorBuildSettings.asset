@@ -5,12 +5,34 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/_Scenes/Chips/5 - POLOSA.unity
-    guid: 23471051f641f4848931df7813de882d
   - enabled: 1
-    path: Assets/_Scenes/Chips/5 - POLOSA 1.unity
-    guid: 4cbe7c4fa34583e4a8dfa85cfebbbd9a
+    path: Assets/_Scenes/Chips/00 - MENU.unity
+    guid: bac2cadce08f06a4fa5d255841af5a5a
+  - enabled: 1
+    path: Assets/_Scenes/Chips/0 -BAZA.unity
+    guid: 6bcb0497d85a2874098fd3f6690d8901
+  - enabled: 1
+    path: Assets/_Scenes/Chips/1 - VOLCANO.unity
+    guid: 511b9e4c25af0cd4b99eb04cc245e33b
+  - enabled: 1
+    path: Assets/_Scenes/Chips/2 - COLOR PLATO.unity
+    guid: ab8bca73fbd9a1a4587b50856c425281
+  - enabled: 1
+    path: Assets/_Scenes/Chips/3 - RIVER.unity
+    guid: 8f936292ea021c64fb7cf7b7b2e5108e
+  - enabled: 1
+    path: Assets/_Scenes/Chips/4 - POIZON LAKE.unity
+    guid: 16461dc615f71ba41b27a5cf6d74fce4
+  - enabled: 1
+    path: Assets/_Scenes/Chips/5 - MINEFIEALD.unity
+    guid: 485c5f20030933445a368c7e1743eb1c
+  - enabled: 1
+    path: Assets/_Scenes/Chips/6 - CANION.unity
+    guid: 95beda17b7a493949bb605e7d9679b27
+  - enabled: 1
+    path: Assets/_Scenes/Chips/7 - JUNGLE RUN.unity
+    guid: e2fe00db15be99241b8ab594898a0690
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: e1df9200bdd9b40508eb908c6b3fde6b,
       type: 2}
+  m_UseUCBPForAssetBundles: 0

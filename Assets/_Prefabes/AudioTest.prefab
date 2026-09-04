@@ -48,6 +48,7 @@ MonoBehaviour:
   processMesh: 0
   processAudio: 1
   processTexture: 0
+  processAnimator: 0
   fbxPath: 
   meshName: 
   meshAddress: 
@@ -55,6 +56,8 @@ MonoBehaviour:
   audioClipName: 
   texturePath: 
   textureName: 
+  animatorControllerPath: 
+  animatorControllerName: 
 --- !u!82 &5249600301702755769
 AudioSource:
   m_ObjectHideFlags: 0
@@ -66,6 +69,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
