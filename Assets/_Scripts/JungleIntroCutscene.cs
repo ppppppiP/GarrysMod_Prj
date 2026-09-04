@@ -3,33 +3,46 @@ using UnityEngine;
 [DisallowMultipleComponent]
 public sealed class JungleIntroCutscene : MonoBehaviour
 {
-    [Header("Boulder path — move these points in Scene view")]
+    [Header("Траектория камня")]
+    [InspectorName("Старт камня")]
     public Transform boulderStart;
+    [InspectorName("Изгиб траектории")]
     public Transform boulderMiddle;
+    [InspectorName("Финиш камня")]
     public Transform boulderEnd;
-    [Tooltip("Where the boulder is placed after the intro finishes.")]
+    [InspectorName("Позиция камня в игре"), Tooltip("Сюда камень перемещается после окончания заставки.")]
     public Transform boulderGameplay;
 
-    [Header("Replaceable intro scenery")]
-    [Tooltip("Prefab instance of the hill. It is visible during the intro and disabled when gameplay starts.")]
+    [Header("Декорации заставки")]
+    [InspectorName("Склон"), Tooltip("Заменяемый склон: виден во время заставки и отключается при начале игры.")]
     public GameObject introSlope;
 
-    [Header("Camera path — move and rotate these points")]
+    [Header("Траектория камеры")]
+    [InspectorName("Старт камеры")]
     public Transform cameraStart;
+    [InspectorName("Игровая камера")]
     public Transform cameraGameplay;
+    [InspectorName("Следить за камнем"), Tooltip("До начала перехода камера поворачивается в сторону камня.")]
     public bool lookAtBoulderDuringRoll = true;
+    [InspectorName("Высота точки взгляда")]
     public float cameraLookHeight = 0.5f;
 
-    [Header("Timing")]
+    [Header("Тайминги")]
+    [InspectorName("Длительность движения камня")]
     [Min(0.1f)] public float boulderRollDuration = 2.2f;
-    [Tooltip("Delay from the beginning of the intro before the camera starts moving to the player.")]
+    [InspectorName("Задержка перехода камеры"), Tooltip("Через сколько секунд от начала заставки камера начнёт переход к игроку.")]
     [Min(0f)] public float cameraTransitionDelay = 0.45f;
+    [InspectorName("Длительность перехода камеры")]
     [Min(0.1f)] public float cameraTransitionDuration = 1.4f;
+    [InspectorName("Длительность пустой дороги")]
     [Min(0f)] public float emptyRoadDuration = 4f;
 
-    [Header("Motion curves")]
+    [Header("Кривые движения")]
+    [InspectorName("Кривая движения камня")]
     public AnimationCurve boulderMotion = AnimationCurve.EaseInOut(0f, 0f, 1f, 1f);
+    [InspectorName("Кривая движения камеры")]
     public AnimationCurve cameraMotion = AnimationCurve.EaseInOut(0f, 0f, 1f, 1f);
+    [InspectorName("Скорость вращения камня")]
     [Min(0f)] public float boulderRotationSpeed = 520f;
 
     private Camera targetCamera;

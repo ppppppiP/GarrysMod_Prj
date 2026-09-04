@@ -14,6 +14,8 @@ public sealed class JungleRunnerLevel : MonoBehaviour
         public GameObject gameObject;
         public ObstacleKind kind;
         public int lane;
+        public float distance;
+        public float spin;
         public bool checkedCollision;
     }
 
@@ -23,7 +25,22 @@ public sealed class JungleRunnerLevel : MonoBehaviour
         public PickupKind kind;
         public int lane;
         public float baseY;
+        public float distance;
+        public float spin;
+        public Quaternion baseRotation;
         public bool collected;
+    }
+
+    private sealed class TrackVisual
+    {
+        public Transform transform;
+        public float distance;
+        public float lateral;
+        public float height;
+        public float loopLength;
+        public Quaternion baseRotation;
+        public int environmentLayer;
+        public int clearedTurnSide;
     }
 
     private const float CarBaseY = 0.62f;
@@ -39,9 +56,10 @@ public sealed class JungleRunnerLevel : MonoBehaviour
     [SerializeField] private float maximumSpeed = 22f;
 
     [Header("Performance")]
-    [SerializeField, Range(30, 120)] private int targetFrameRate = 60;
     [SerializeField] private bool enableFog = true;
     [SerializeField] private bool enableRealtimeShadows;
+    [InspectorName("Изгиб мира"), SerializeField] private JungleWorldBend worldBend;
+    [InspectorName("Зоны, события и повороты"), SerializeField] private JungleWorldDirector worldDirector;
 
     [Header("Separate generators")]
     [SerializeField] private JungleRoadGenerator roadGenerator;
@@ -75,13 +93,12 @@ public sealed class JungleRunnerLevel : MonoBehaviour
     [SerializeField] private GameObject treeModel;
     [SerializeField] private GameObject ruinModel;
     [SerializeField] private GameObject[] obstacleModels = new GameObject[6];
-    private int environmentClusterCount = 8;
-    private float environmentClusterSpacing = 10f;
+    private JungleEnvironmentGenerator[] environmentGenerators;
 
     private readonly List<Obstacle> obstacles = new List<Obstacle>();
     private readonly List<Pickup> pickups = new List<Pickup>();
-    private readonly List<Transform> scrollingDecor = new List<Transform>();
-    private readonly List<Transform> roadSegments = new List<Transform>();
+    private readonly List<TrackVisual> scrollingDecor = new List<TrackVisual>();
+    private readonly List<TrackVisual> roadSegments = new List<TrackVisual>();
 
     private Transform car;
     private Transform carBody;
@@ -98,6 +115,8 @@ public sealed class JungleRunnerLevel : MonoBehaviour
     private Material redMaterial;
     private Material cyanMaterial;
     private Material violetMaterial;
+    private Texture2D roadTexture;
+    private Vector2 roadTextureTiling = Vector2.one;
 
     private RunState state;
     private int currentLane;
@@ -122,6 +141,12 @@ public sealed class JungleRunnerLevel : MonoBehaviour
     private float flashTimer;
     private float emptyRoadRemaining;
     private bool gameplayGenerationActive;
+    private Vector3 trackForward = Vector3.forward;
+    private Vector3 trackRight = Vector3.right;
+    private Vector3 cameraTurnStartPosition;
+    private Quaternion cameraTurnStartRotation;
+    private float cameraTurnProgress = 1f;
+    [SerializeField, InspectorName("Длительность поворота камеры"), Range(0.08f, 0.6f)] private float cameraTurnDuration = 0.28f;
 
     private bool IsGrounded { get { return jumpHeight <= 0.001f; } }
     private bool IsCrouching { get { return crouchRemaining > 0f; } }
@@ -148,8 +173,10 @@ public sealed class JungleRunnerLevel : MonoBehaviour
     private void Awake()
     {
         QualitySettings.vSyncCount = 0;
-        Application.targetFrameRate = targetFrameRate;
+        Application.targetFrameRate = -1;
         Screen.orientation = ScreenOrientation.Portrait;
+        if (worldBend == null) worldBend = GetComponent<JungleWorldBend>();
+        if (worldDirector == null) worldDirector = GetComponent<JungleWorldDirector>();
         ApplyGeneratorSettings();
         Random.InitState(generationSeed);
         CreateMaterials();
@@ -170,25 +197,31 @@ public sealed class JungleRunnerLevel : MonoBehaviour
             coinSpacing = roadGenerator.coinSpacing;
             generationSeed = roadGenerator.generationSeed;
             roadSegmentModel = roadGenerator.roadSegmentPrefab;
+            roadTexture = roadGenerator.roadTexture;
+            roadTextureTiling = roadGenerator.roadTextureTiling;
             coinPrefab = roadGenerator.coinPrefab;
             carModel = roadGenerator.carPrefab;
             obstacleModels = roadGenerator.GetObstaclePrefabs();
         }
-        if (environmentGenerator != null)
+        environmentGenerators = GetComponentsInChildren<JungleEnvironmentGenerator>(true);
+        JungleEnvironmentGenerator primaryEnvironment = environmentGenerator != null
+            ? environmentGenerator
+            : environmentGenerators != null && environmentGenerators.Length > 0 ? environmentGenerators[0] : null;
+        if (primaryEnvironment != null)
         {
-            environmentClusterCount = environmentGenerator.clusterCount;
-            environmentClusterSpacing = environmentGenerator.clusterSpacing;
-            treeModel = environmentGenerator.treePrefab;
-            ruinModel = environmentGenerator.ruinPrefab;
-            boulderModel = environmentGenerator.boulderPrefab;
+            treeModel = primaryEnvironment.treePrefab;
+            ruinModel = primaryEnvironment.ruinPrefab;
+            boulderModel = primaryEnvironment.boulderPrefab;
         }
     }
 
     private void CreateMaterials()
     {
-        Shader shader = Shader.Find("Universal Render Pipeline/Lit");
+        Shader shader = worldBend != null ? worldBend.MobileShader : null;
+        if (shader == null) shader = Shader.Find("Universal Render Pipeline/Lit");
         if (shader == null) shader = Shader.Find("Standard");
         roadMaterial = MakeMaterial(shader, new Color(0.18f, 0.16f, 0.12f), "Runner Road");
+        ApplyRoadTexture(roadMaterial);
         laneMaterial = MakeMaterial(shader, new Color(0.75f, 0.62f, 0.32f), "Runner Lane Marking");
         jungleMaterial = MakeMaterial(shader, new Color(0.16f, 0.48f, 0.19f), "Runner Jungle");
         darkGreenMaterial = MakeMaterial(shader, new Color(0.04f, 0.24f, 0.08f), "Runner Dark Jungle");
@@ -205,7 +238,25 @@ public sealed class JungleRunnerLevel : MonoBehaviour
         Material material = new Material(shader);
         material.name = materialName;
         material.color = color;
+        material.enableInstancing = true;
         return material;
+    }
+
+    private void ApplyRoadTexture(Material material)
+    {
+        if (material == null || roadTexture == null) return;
+        Vector2 tiling = new Vector2(Mathf.Max(0.01f, roadTextureTiling.x), Mathf.Max(0.01f, roadTextureTiling.y));
+        if (material.HasProperty("_BaseMap"))
+        {
+            material.SetTexture("_BaseMap", roadTexture);
+            material.SetTextureScale("_BaseMap", tiling);
+        }
+        if (material.HasProperty("_MainTex"))
+        {
+            material.SetTexture("_MainTex", roadTexture);
+            material.SetTextureScale("_MainTex", tiling);
+        }
+        material.color = Color.white;
     }
 
     private void CreateWorld()
@@ -235,6 +286,12 @@ public sealed class JungleRunnerLevel : MonoBehaviour
         sun.shadows = enableRealtimeShadows ? LightShadows.Soft : LightShadows.None;
         lightObject.transform.rotation = Quaternion.Euler(42f, -28f, 0f);
 
+        if (worldDirector != null)
+        {
+            worldDirector.SetTrackFrame(Vector3.zero, trackForward);
+            worldDirector.Initialize(runnerCamera, sun, worldBend, roadMaterial, woodMaterial, stoneMaterial, cyanMaterial, redMaterial, jungleMaterial, treeModel);
+        }
+
         for (int i = 0; i < roadSegmentCount; i++)
         {
             float z = -roadSegmentLength + i * roadSegmentLength;
@@ -243,7 +300,15 @@ public sealed class JungleRunnerLevel : MonoBehaviour
                 road = CloneModel(roadSegmentModel, "Road Segment", transform, new Vector3(0f, 0f, z)).transform;
             else
                 road = Primitive(PrimitiveType.Cube, "Road Segment", transform, new Vector3(0f, -0.18f, z), new Vector3(8f, 0.3f, 7.8f), roadMaterial).transform;
-            roadSegments.Add(road);
+            roadSegments.Add(new TrackVisual
+            {
+                transform = road,
+                distance = z,
+                lateral = 0f,
+                height = road.position.y,
+                loopLength = roadSegmentCount * roadSegmentLength,
+                baseRotation = road.rotation
+            });
             if (roadSegmentModel == null)
             {
                 for (int lane = -1; lane <= 0; lane++)
@@ -254,14 +319,26 @@ public sealed class JungleRunnerLevel : MonoBehaviour
             }
         }
 
-        for (int i = 0; i < environmentClusterCount; i++)
-            CreateRoadsideCluster(-8f + i * environmentClusterSpacing, i);
+        if (environmentGenerators != null)
+        {
+            for (int generatorIndex = 0; generatorIndex < environmentGenerators.Length; generatorIndex++)
+            {
+                JungleEnvironmentGenerator generator = environmentGenerators[generatorIndex];
+                if (generator == null || !generator.isActiveAndEnabled) continue;
+                for (int i = 0; i < generator.clusterCount; i++)
+                    CreateRoadsideCluster(generator, -8f + i * generator.clusterSpacing, i, generatorIndex);
+            }
+        }
 
         CreateCar();
         CreateBoulder();
 
         for (int i = 0; i < obstacleCount; i++)
-            CreateObstacle((ObstacleKind)(i % 6), Random.Range(-1, 2), 18f + i * obstacleSpacing);
+        {
+            float obstacleZ = 18f + i * obstacleSpacing;
+            if (worldDirector != null) obstacleZ = worldDirector.MoveOutsideTurnSafeZone(obstacleZ);
+            CreateObstacle((ObstacleKind)(i % 6), Random.Range(-1, 2), obstacleZ);
+        }
 
         for (int i = 0; i < coinCount; i++)
             CreatePickup(PickupKind.Coin, (i % 3) - 1, 11f + i * coinSpacing, i % 8 == 4 ? 1.9f : 0.95f);
@@ -271,34 +348,310 @@ public sealed class JungleRunnerLevel : MonoBehaviour
         CreatePickup(PickupKind.Shield, 1, 108f, 1.05f);
     }
 
-    private void CreateRoadsideCluster(float z, int index)
+    private void CreateRoadsideCluster(JungleEnvironmentGenerator generator, float z, int index, int generatorIndex)
     {
-        GameObject cluster = new GameObject("Jungle Cluster " + index);
+        JungleBiomeZone biome = worldDirector != null ? worldDirector.GetBiomeAtDistance(Mathf.Max(0f, z + 8f)) : null;
+        GameObject cluster = new GameObject(generator.name + " Cluster " + index);
         cluster.transform.SetParent(transform);
         cluster.transform.position = new Vector3(0f, 0f, z);
-        scrollingDecor.Add(cluster.transform);
+        scrollingDecor.Add(new TrackVisual
+        {
+            transform = cluster.transform,
+            distance = z,
+            lateral = 0f,
+            height = 0f,
+            loopLength = Mathf.Max(generator.clusterSpacing, generator.clusterCount * generator.clusterSpacing),
+            baseRotation = Quaternion.identity,
+            environmentLayer = generatorIndex
+        });
 
+        Vector3 leftVineAnchor = Vector3.zero;
+        Vector3 rightVineAnchor = Vector3.zero;
+        bool hasLeftVineAnchor = false;
+        bool hasRightVineAnchor = false;
+        int treesPerSide = biome != null
+            ? Mathf.Clamp(Mathf.RoundToInt(generator.treesPerSide * biome.treeDensityMultiplier), 0, 8)
+            : generator.treesPerSide;
         for (int side = -1; side <= 1; side += 2)
         {
-            float x = side * (5.2f + (index % 3));
-            if (treeModel != null)
-                CloneModel(treeModel, "Tree", cluster.transform, new Vector3(x, 0f, 0f));
-            else
+            for (int treeIndex = 0; treeIndex < treesPerSide; treeIndex++)
             {
-                GameObject trunk = Primitive(PrimitiveType.Cylinder, "Palm Trunk", cluster.transform, new Vector3(x, 1.5f, 0f), new Vector3(0.45f, 1.5f, 0.45f), woodMaterial);
-                Primitive(PrimitiveType.Sphere, "Palm Crown", trunk.transform, new Vector3(0f, 1.2f, 0f), new Vector3(3f, 1.2f, 2.2f), index % 2 == 0 ? jungleMaterial : darkGreenMaterial);
-            }
-            if (index % 3 == 0)
-            {
-                if (ruinModel != null)
-                    CloneModel(ruinModel, "Ruin", cluster.transform, new Vector3(side * 4.1f, 0f, 1.8f));
+                float roadHalfWidth = laneWidth * 1.7f;
+                float minimumTreeDistance = Mathf.Max(generator.minimumDistanceFromCenter, roadHalfWidth + generator.treeRoadEdgeClearance);
+                float maximumTreeDistance = Mathf.Max(minimumTreeDistance, generator.maximumDistanceFromCenter);
+                float distance = Random.Range(minimumTreeDistance, maximumTreeDistance);
+                float x = side * distance;
+                float localZ = Random.Range(-generator.forwardJitter, generator.forwardJitter);
+                GameObject tree;
+                if (generator.treePrefab != null)
+                    tree = CloneModel(generator.treePrefab, "Tree", cluster.transform, new Vector3(x, 0f, localZ));
                 else
                 {
-                    Primitive(PrimitiveType.Cube, "Ruin Pillar", cluster.transform, new Vector3(side * 4.1f, 1.35f, 1.8f), new Vector3(0.85f, 2.7f, 0.85f), stoneMaterial);
-                    Primitive(PrimitiveType.Cube, "Ruin Cap", cluster.transform, new Vector3(side * 4.1f, 2.85f, 1.8f), new Vector3(1.25f, 0.28f, 1.25f), stoneMaterial);
+                    tree = Primitive(PrimitiveType.Cylinder, "Palm Trunk", cluster.transform, new Vector3(x, 1.5f, localZ), new Vector3(0.45f, 1.5f, 0.45f), woodMaterial);
+                    Primitive(PrimitiveType.Sphere, "Palm Crown", tree.transform, new Vector3(0f, 1.2f, 0f), new Vector3(3f, 1.2f, 2.2f), index % 2 == 0 ? jungleMaterial : darkGreenMaterial);
+                }
+
+                float treeScale = Random.Range(generator.minimumTreeScale, generator.maximumTreeScale);
+                tree.transform.localScale *= treeScale;
+                if (generator.randomizeTreeRotation)
+                    tree.transform.localRotation *= Quaternion.Euler(0f, Random.Range(0f, 360f), 0f);
+
+                if (treeIndex == 0)
+                {
+                    if (side < 0)
+                    {
+                        leftVineAnchor = tree.transform.localPosition;
+                        hasLeftVineAnchor = true;
+                    }
+                    else
+                    {
+                        rightVineAnchor = tree.transform.localPosition;
+                        hasRightVineAnchor = true;
+                    }
                 }
             }
+
         }
+
+        float ruinChance = generator.ruinSpawnChance * (biome != null ? biome.ruinChanceMultiplier : 1f);
+        if (generator.ruinPrefab != null && Random.value < Mathf.Clamp01(ruinChance))
+        {
+            int ruinCount = Random.Range(generator.minimumRuinsPerCluster, generator.maximumRuinsPerCluster + 1);
+            for (int ruinIndex = 0; ruinIndex < ruinCount; ruinIndex++)
+            {
+                int ruinSide = Random.value < 0.5f ? -1 : 1;
+                float ruinDistance = Random.Range(generator.minimumRuinDistanceFromCenter, generator.maximumRuinDistanceFromCenter);
+                float ruinZ = Random.Range(-generator.ruinForwardJitter, generator.ruinForwardJitter);
+                GameObject ruin = CloneModel(generator.ruinPrefab, "Ruin", cluster.transform,
+                    new Vector3(ruinSide * ruinDistance, generator.ruinHeightOffset, ruinZ));
+
+                float ruinScale = Random.Range(generator.minimumRuinScale, generator.maximumRuinScale);
+                ruin.transform.localScale *= ruinScale;
+                if (generator.randomizeRuinRotation)
+                    ruin.transform.localRotation *= Quaternion.Euler(0f, Random.Range(0f, 360f), 0f);
+            }
+        }
+
+        float vineChance = generator.vineSpawnChance * (biome != null ? biome.vineChanceMultiplier : 1f);
+        if (generator.vinePrefab != null && hasLeftVineAnchor && hasRightVineAnchor && Random.value < Mathf.Clamp01(vineChance))
+        {
+            float vineY = generator.vineHeight + Random.Range(-generator.vineHeightVariation, generator.vineHeightVariation);
+            leftVineAnchor.y = vineY + Random.Range(-generator.vineEndHeightVariation, generator.vineEndHeightVariation);
+            rightVineAnchor.y = vineY + Random.Range(-generator.vineEndHeightVariation, generator.vineEndHeightVariation);
+            float depthDirection = Random.value < 0.5f ? -1f : 1f;
+            float depthDifference = Random.Range(generator.vineDepthVariation * 0.35f, generator.vineDepthVariation) * depthDirection;
+            leftVineAnchor.z -= depthDifference * 0.5f;
+            rightVineAnchor.z += depthDifference * 0.5f;
+
+            if (runnerCamera != null)
+            {
+                float halfFovTangent = Mathf.Tan(runnerCamera.fieldOfView * 0.5f * Mathf.Deg2Rad);
+                Vector3 cameraPosition = runnerCamera.transform.position;
+                Vector3 cameraForward = runnerCamera.transform.forward;
+                Vector3 cameraRight = runnerCamera.transform.right;
+
+                Vector3 leftWorld = cluster.transform.TransformPoint(leftVineAnchor);
+                float leftDepth = Mathf.Max(0.1f, Vector3.Dot(leftWorld - cameraPosition, cameraForward));
+                float leftHalfWidth = halfFovTangent * leftDepth * runnerCamera.aspect;
+                float leftCurrent = Vector3.Dot(leftWorld - cameraPosition, cameraRight);
+                float leftTarget = -leftHalfWidth - generator.vineEndpointExtension;
+                leftWorld += cameraRight * Mathf.Min(0f, leftTarget - leftCurrent);
+                leftVineAnchor = cluster.transform.InverseTransformPoint(leftWorld);
+
+                Vector3 rightWorld = cluster.transform.TransformPoint(rightVineAnchor);
+                float rightDepth = Mathf.Max(0.1f, Vector3.Dot(rightWorld - cameraPosition, cameraForward));
+                float rightHalfWidth = halfFovTangent * rightDepth * runnerCamera.aspect;
+                float rightCurrent = Vector3.Dot(rightWorld - cameraPosition, cameraRight);
+                float rightTarget = rightHalfWidth + generator.vineEndpointExtension;
+                rightWorld += cameraRight * Mathf.Max(0f, rightTarget - rightCurrent);
+                rightVineAnchor = cluster.transform.InverseTransformPoint(rightWorld);
+            }
+            else
+            {
+                leftVineAnchor.x -= generator.vineEndpointExtension;
+                rightVineAnchor.x += generator.vineEndpointExtension;
+            }
+
+            Vector3 direction = rightVineAnchor - leftVineAnchor;
+            float randomSag = Mathf.Max(0.1f, generator.vineSag + Random.Range(-generator.vineSagVariation, generator.vineSagVariation));
+            GameObject vine = CloneModel(generator.vinePrefab, "Vines Across Road", cluster.transform, Vector3.zero);
+            vine.transform.localRotation = Quaternion.identity;
+            vine.transform.localScale = Vector3.one;
+            LineRenderer line = vine.GetComponentInChildren<LineRenderer>(true);
+            if (line != null)
+            {
+                float waveDirection = Random.value < 0.5f ? -1f : 1f;
+                float waveAmount = Random.Range(generator.vineSideWave * 0.35f, generator.vineSideWave) * waveDirection;
+                bool broken = Random.value < generator.brokenVineChance;
+                float gapHalf = generator.brokenVineGap * 0.5f;
+                if (broken)
+                {
+                    ConfigureVineLine(line, leftVineAnchor, rightVineAnchor, randomSag, waveAmount, generator.vineWidth, generator.vineCurveSegments, 0f, 0.5f - gapHalf);
+                    LineRenderer brokenEnd = AddMatchingLineRenderer(line);
+                    ConfigureVineLine(brokenEnd, leftVineAnchor, rightVineAnchor, randomSag, waveAmount, generator.vineWidth * 0.9f, generator.vineCurveSegments, 0.5f + gapHalf, 1f);
+                }
+                else
+                    ConfigureVineLine(line, leftVineAnchor, rightVineAnchor, randomSag, waveAmount, generator.vineWidth, generator.vineCurveSegments, 0f, 1f);
+
+                if (!broken && Random.value < generator.doubleVineChance)
+                {
+                    LineRenderer secondLine = AddMatchingLineRenderer(line);
+                    Vector3 secondLeft = leftVineAnchor + Vector3.up * generator.doubleVineOffset;
+                    Vector3 secondRight = rightVineAnchor + Vector3.up * (generator.doubleVineOffset * Random.Range(0.65f, 1.25f));
+                    ConfigureVineLine(secondLine, secondLeft, secondRight, randomSag * Random.Range(0.75f, 1.2f), -waveAmount * 0.7f, generator.vineWidth * 0.82f, generator.vineCurveSegments, 0f, 1f);
+                }
+
+                if (Random.value < generator.vineLeavesChance)
+                    CreateVineLeaves(line.transform, line.sharedMaterial, leftVineAnchor, rightVineAnchor, randomSag, waveAmount, generator.vineLeafCount);
+            }
+            else
+            {
+                vine.transform.localPosition = (leftVineAnchor + rightVineAnchor) * 0.5f;
+                vine.transform.localRotation = Quaternion.FromToRotation(Vector3.right, direction.normalized);
+                vine.transform.localScale = new Vector3(direction.magnitude, randomSag, 1f);
+            }
+        }
+
+        if (generatorIndex == 0 && biome != null)
+            CreateBiomeDecoration(cluster.transform, biome, index, generator.clusterSpacing);
+    }
+
+    private static void ConfigureVineLine(LineRenderer line, Vector3 left, Vector3 right, float sag, float wave, float width, int segments, float startT, float endT)
+    {
+        int pointCount = Mathf.Max(4, Mathf.RoundToInt(Mathf.Max(6, segments) * Mathf.Max(0.3f, endT - startT)));
+        line.useWorldSpace = false;
+        line.positionCount = pointCount;
+        line.startWidth = width;
+        line.endWidth = width * 0.82f;
+        line.numCornerVertices = 1;
+        line.numCapVertices = 0;
+        for (int pointIndex = 0; pointIndex < pointCount; pointIndex++)
+        {
+            float t = Mathf.Lerp(startT, endT, pointIndex / (pointCount - 1f));
+            line.SetPosition(pointIndex, EvaluateVinePoint(left, right, sag, wave, t));
+        }
+    }
+
+    private static Vector3 EvaluateVinePoint(Vector3 left, Vector3 right, float sag, float wave, float t)
+    {
+        Vector3 point = Vector3.Lerp(left, right, t);
+        point.y -= Mathf.Sin(t * Mathf.PI) * sag;
+        point.z += Mathf.Sin(t * Mathf.PI * 2f) * wave;
+        return point;
+    }
+
+    private static LineRenderer AddMatchingLineRenderer(LineRenderer source)
+    {
+        GameObject lineObject = new GameObject("Дополнительная линия лианы");
+        lineObject.transform.SetParent(source.transform, false);
+        LineRenderer line = lineObject.AddComponent<LineRenderer>();
+        line.sharedMaterial = source.sharedMaterial;
+        line.textureMode = source.textureMode;
+        line.alignment = source.alignment;
+        line.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+        line.receiveShadows = false;
+        line.lightProbeUsage = UnityEngine.Rendering.LightProbeUsage.Off;
+        line.reflectionProbeUsage = UnityEngine.Rendering.ReflectionProbeUsage.Off;
+        line.motionVectorGenerationMode = MotionVectorGenerationMode.ForceNoMotion;
+        return line;
+    }
+
+    private void CreateBiomeDecoration(Transform cluster, JungleBiomeZone biome, int index, float spacing)
+    {
+        if (biome.type == JungleBiomeType.Swamp && index % 2 == 0)
+        {
+            float stripLength = Mathf.Max(3f, spacing * 0.98f);
+            Mesh puddles = JungleProceduralMeshFactory.CreatePuddlePair(9f, 4.8f, stripLength, generationSeed + index * 19);
+            CreateMeshVisual("Неровные болотные лужи", cluster, new Vector3(0f, -0.27f, 0f), puddles, cyanMaterial);
+        }
+        else if (biome.type == JungleBiomeType.Waterfall && index % 4 == 0)
+        {
+            int side = (index & 1) == 0 ? -1 : 1;
+            CreateMeshVisual("Дальний водопад", cluster, new Vector3(side * 12f, 4.4f, 1.5f), JungleProceduralMeshFactory.CreateWaterfall(3.5f, 8.8f), cyanMaterial);
+            CreateMeshVisual("Скала водопада", cluster, new Vector3(side * 12f, 9f, 1.7f), JungleProceduralMeshFactory.CreateRock(2.7f, generationSeed + index), stoneMaterial);
+        }
+    }
+
+    private static void CreateVineLeaves(Transform parent, Material material, Vector3 left, Vector3 right, float sag, float wave, int leafCount)
+    {
+        leafCount = Mathf.Clamp(leafCount, 1, 6);
+        const int verticesPerLeaf = 7;
+        const int indicesPerLeaf = 36;
+        Vector3[] vertices = new Vector3[leafCount * verticesPerLeaf];
+        Vector2[] uvs = new Vector2[vertices.Length];
+        int[] triangles = new int[leafCount * indicesPerLeaf];
+        Vector3[] normals = new Vector3[vertices.Length];
+        for (int i = 0; i < leafCount; i++)
+        {
+            float t = Mathf.Lerp(0.16f, 0.84f, (i + 0.5f) / leafCount) + Random.Range(-0.055f, 0.055f);
+            Vector3 center = EvaluateVinePoint(left, right, sag, wave, Mathf.Clamp01(t));
+            float width = Random.Range(0.16f, 0.25f);
+            float height = Random.Range(0.26f, 0.42f);
+            float rotation = Random.Range(-55f, 55f) * Mathf.Deg2Rad;
+            float cos = Mathf.Cos(rotation);
+            float sin = Mathf.Sin(rotation);
+            Vector2[] shape =
+            {
+                Vector2.zero, new Vector2(0f, height), new Vector2(width * 0.72f, height * 0.22f),
+                new Vector2(width * 0.42f, -height * 0.58f), new Vector2(0f, -height),
+                new Vector2(-width * 0.42f, -height * 0.58f), new Vector2(-width * 0.72f, height * 0.22f)
+            };
+            int vertex = i * verticesPerLeaf;
+            for (int point = 0; point < verticesPerLeaf; point++)
+            {
+                Vector2 p = shape[point];
+                Vector2 rotated = new Vector2(p.x * cos - p.y * sin, p.x * sin + p.y * cos);
+                vertices[vertex + point] = center + new Vector3(rotated.x, rotated.y, point == 0 ? -0.025f : 0f);
+                uvs[vertex + point] = new Vector2(rotated.x / (width * 2f) + 0.5f, rotated.y / (height * 2f) + 0.5f);
+                normals[vertex + point] = Vector3.back;
+            }
+            int triangle = i * indicesPerLeaf;
+            for (int edge = 0; edge < 6; edge++)
+            {
+                int a = vertex + 1 + edge;
+                int b = vertex + 1 + (edge + 1) % 6;
+                int offset = triangle + edge * 6;
+                triangles[offset] = vertex;
+                triangles[offset + 1] = b;
+                triangles[offset + 2] = a;
+                triangles[offset + 3] = vertex;
+                triangles[offset + 4] = a;
+                triangles[offset + 5] = b;
+            }
+        }
+
+        Mesh mesh = new Mesh { name = "Vine Leaves Combined" };
+        mesh.vertices = vertices;
+        mesh.uv = uvs;
+        mesh.normals = normals;
+        mesh.triangles = triangles;
+        mesh.RecalculateBounds();
+        GameObject leaves = new GameObject("Листья лианы (объединённый меш)");
+        leaves.transform.SetParent(parent, false);
+        leaves.AddComponent<MeshFilter>().sharedMesh = mesh;
+        MeshRenderer renderer = leaves.AddComponent<MeshRenderer>();
+        renderer.sharedMaterial = material;
+        renderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+        renderer.receiveShadows = false;
+        renderer.lightProbeUsage = UnityEngine.Rendering.LightProbeUsage.Off;
+        renderer.reflectionProbeUsage = UnityEngine.Rendering.ReflectionProbeUsage.Off;
+        renderer.motionVectorGenerationMode = MotionVectorGenerationMode.ForceNoMotion;
+    }
+
+    private static GameObject CreateMeshVisual(string objectName, Transform parent, Vector3 localPosition, Mesh mesh, Material material)
+    {
+        GameObject result = new GameObject(objectName);
+        result.transform.SetParent(parent, false);
+        result.transform.localPosition = localPosition;
+        result.AddComponent<MeshFilter>().sharedMesh = mesh;
+        MeshRenderer renderer = result.AddComponent<MeshRenderer>();
+        renderer.sharedMaterial = material;
+        renderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+        renderer.receiveShadows = false;
+        renderer.lightProbeUsage = UnityEngine.Rendering.LightProbeUsage.Off;
+        renderer.reflectionProbeUsage = UnityEngine.Rendering.ReflectionProbeUsage.Off;
+        renderer.motionVectorGenerationMode = MotionVectorGenerationMode.ForceNoMotion;
+        return result;
     }
 
     private void CreateCar()
@@ -345,7 +698,7 @@ public sealed class JungleRunnerLevel : MonoBehaviour
         GameObject root = new GameObject("Obstacle " + kind);
         root.transform.SetParent(transform);
         root.transform.position = new Vector3(lane * laneWidth, 0f, z);
-        Obstacle obstacle = new Obstacle { gameObject = root, kind = kind, lane = lane };
+        Obstacle obstacle = new Obstacle { gameObject = root, kind = kind, lane = lane, distance = z };
         obstacles.Add(obstacle);
 
         GameObject customModel = obstacleModels != null && (int)kind < obstacleModels.Length ? obstacleModels[(int)kind] : null;
@@ -401,10 +754,10 @@ public sealed class JungleRunnerLevel : MonoBehaviour
             pickupObject = Primitive(shape, "Pickup " + kind, transform, new Vector3(lane * laneWidth, y, z), kind == PickupKind.Coin ? new Vector3(0.42f, 0.10f, 0.42f) : Vector3.one * 0.72f, material);
             if (kind == PickupKind.Coin) pickupObject.transform.rotation = Quaternion.Euler(90f, 0f, 0f);
         }
-        pickups.Add(new Pickup { gameObject = pickupObject, kind = kind, lane = lane, baseY = y });
+        pickups.Add(new Pickup { gameObject = pickupObject, kind = kind, lane = lane, baseY = y, distance = z, baseRotation = pickupObject.transform.rotation });
     }
 
-    private static GameObject Primitive(PrimitiveType type, string objectName, Transform parent, Vector3 position, Vector3 scale, Material material)
+    private GameObject Primitive(PrimitiveType type, string objectName, Transform parent, Vector3 position, Vector3 scale, Material material)
     {
         GameObject result = GameObject.CreatePrimitive(type);
         result.name = objectName;
@@ -419,11 +772,14 @@ public sealed class JungleRunnerLevel : MonoBehaviour
             renderer.sharedMaterial = material;
             renderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
             renderer.receiveShadows = false;
+            renderer.lightProbeUsage = UnityEngine.Rendering.LightProbeUsage.Off;
+            renderer.reflectionProbeUsage = UnityEngine.Rendering.ReflectionProbeUsage.Off;
+            renderer.motionVectorGenerationMode = MotionVectorGenerationMode.ForceNoMotion;
         }
         return result;
     }
 
-    private static GameObject CloneModel(GameObject model, string objectName, Transform parent, Vector3 localPosition)
+    private GameObject CloneModel(GameObject model, string objectName, Transform parent, Vector3 localPosition)
     {
         GameObject result = Instantiate(model, parent);
         result.name = objectName;
@@ -436,12 +792,28 @@ public sealed class JungleRunnerLevel : MonoBehaviour
         {
             modelRenderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
             modelRenderer.receiveShadows = false;
+            modelRenderer.lightProbeUsage = UnityEngine.Rendering.LightProbeUsage.Off;
+            modelRenderer.reflectionProbeUsage = UnityEngine.Rendering.ReflectionProbeUsage.Off;
+            modelRenderer.motionVectorGenerationMode = MotionVectorGenerationMode.ForceNoMotion;
+            Material[] materials = modelRenderer.sharedMaterials;
+            for (int i = 0; i < materials.Length; i++)
+            {
+                if (materials[i] == null) continue;
+                materials[i].enableInstancing = true;
+                if (worldBend != null) materials[i] = worldBend.GetCurvedMaterial(materials[i]);
+            }
+            modelRenderer.sharedMaterials = materials;
         }
         return result;
     }
 
     private void BeginNewRun()
     {
+        trackForward = Vector3.forward;
+        trackRight = Vector3.right;
+        cameraTurnProgress = 1f;
+        if (worldBend != null) worldBend.SetTrackOrientation(trackForward, trackRight);
+        if (worldDirector != null) worldDirector.SetTrackFrame(Vector3.zero, trackForward);
         currentLane = targetLane = 0;
         laneVelocity = 0f;
         jumpHeight = 0f;
@@ -454,6 +826,8 @@ public sealed class JungleRunnerLevel : MonoBehaviour
         analyticsSent = false;
         ResetTemporaryBonuses();
         car.position = new Vector3(0f, CarBaseY, 0f);
+        car.rotation = Quaternion.LookRotation(trackForward, Vector3.up);
+        if (worldDirector != null) worldDirector.ResetRuntime();
         ResetObjects();
         StartIntro();
     }
@@ -489,7 +863,10 @@ public sealed class JungleRunnerLevel : MonoBehaviour
         for (int i = 0; i < obstacles.Count; i++)
         {
             obstacles[i].lane = (i % 3) - 1;
-            obstacles[i].gameObject.transform.position = new Vector3(obstacles[i].lane * laneWidth, 0f, 18f + i * obstacleSpacing);
+            float z = 18f + i * obstacleSpacing;
+            if (worldDirector != null) z = worldDirector.MoveOutsideTurnSafeZone(z);
+            obstacles[i].distance = z;
+            ApplyTrackPose(obstacles[i].gameObject.transform, obstacles[i].distance, obstacles[i].lane * laneWidth, 0f, Quaternion.identity);
             obstacles[i].checkedCollision = false;
             obstacles[i].gameObject.SetActive(true);
         }
@@ -497,7 +874,8 @@ public sealed class JungleRunnerLevel : MonoBehaviour
         {
             Pickup pickup = pickups[i];
             float z = pickup.kind == PickupKind.Coin ? 11f + i * coinSpacing : 42f + i * 19f;
-            pickup.gameObject.transform.position = new Vector3(pickup.lane * laneWidth, pickup.baseY, z);
+            pickup.distance = z;
+            ApplyTrackPose(pickup.gameObject.transform, pickup.distance, pickup.lane * laneWidth, pickup.baseY, Quaternion.identity);
             pickup.collected = false;
             pickup.gameObject.SetActive(true);
         }
@@ -564,6 +942,19 @@ public sealed class JungleRunnerLevel : MonoBehaviour
 
     private void ChangeLane(int direction)
     {
+        if (worldDirector != null)
+        {
+            JungleTurnInputResult turnResult = worldDirector.HandleTurnInput(direction);
+            if (turnResult == JungleTurnInputResult.Correct)
+            {
+                return;
+            }
+            if (turnResult == JungleTurnInputResult.Wrong)
+            {
+                Die();
+                return;
+            }
+        }
         targetLane = Mathf.Clamp(targetLane + direction, -1, 1);
     }
 
@@ -579,10 +970,98 @@ public sealed class JungleRunnerLevel : MonoBehaviour
         crouchRemaining = 0.85f;
     }
 
+    private void CommitTurn(int direction)
+    {
+        cameraTurnStartPosition = runnerCamera != null ? runnerCamera.transform.position : Vector3.zero;
+        cameraTurnStartRotation = runnerCamera != null ? runnerCamera.transform.rotation : Quaternion.identity;
+        Quaternion turn = Quaternion.AngleAxis(direction * 90f, Vector3.up);
+        trackForward = (turn * trackForward).normalized;
+        trackRight = (turn * trackRight).normalized;
+        cameraTurnProgress = 0f;
+        if (worldDirector != null) worldDirector.SetTrackFrame(Vector3.zero, trackForward);
+        if (worldBend != null)
+        {
+            worldBend.bendEnabled = true;
+            worldBend.SetTrackOrientation(trackForward, trackRight);
+        }
+        RefreshTrackTransforms();
+    }
+
+    private void UpdateCameraTurn(float delta)
+    {
+        if (runnerCamera == null) return;
+        Vector3 targetPosition = -trackForward * 9.2f + Vector3.up * 6.8f;
+        Quaternion targetRotation = Quaternion.LookRotation(trackForward + Vector3.down * 0.28f, Vector3.up);
+        if (cameraTurnProgress < 1f)
+        {
+            cameraTurnProgress = Mathf.Min(1f, cameraTurnProgress + delta / Mathf.Max(0.05f, cameraTurnDuration));
+            float smooth = cameraTurnProgress * cameraTurnProgress * (3f - 2f * cameraTurnProgress);
+            runnerCamera.transform.position = Vector3.Lerp(cameraTurnStartPosition, targetPosition, smooth);
+            runnerCamera.transform.rotation = Quaternion.Slerp(cameraTurnStartRotation, targetRotation, smooth);
+        }
+        else
+        {
+            runnerCamera.transform.position = targetPosition;
+            runnerCamera.transform.rotation = targetRotation;
+        }
+    }
+
+    private void RefreshTrackTransforms()
+    {
+        for (int i = 0; i < roadSegments.Count; i++)
+        {
+            TrackVisual visual = roadSegments[i];
+            ApplyTrackPose(visual.transform, visual.distance, visual.lateral, visual.height, visual.baseRotation);
+        }
+        for (int i = 0; i < scrollingDecor.Count; i++)
+        {
+            TrackVisual visual = scrollingDecor[i];
+            ApplyTrackPose(visual.transform, visual.distance, visual.lateral, visual.height, visual.baseRotation);
+        }
+        for (int i = 0; i < obstacles.Count; i++)
+            ApplyTrackPose(obstacles[i].gameObject.transform, obstacles[i].distance, obstacles[i].lane * laneWidth, 0f, Quaternion.identity);
+        for (int i = 0; i < pickups.Count; i++)
+            ApplyTrackPose(pickups[i].gameObject.transform, pickups[i].distance, pickups[i].lane * laneWidth, pickups[i].baseY, pickups[i].baseRotation);
+    }
+
+    private void ApplyTrackPose(Transform target, float distance, float lateral, float height, Quaternion baseRotation)
+    {
+        Vector3 segmentForward = trackForward;
+        Vector3 segmentRight = trackRight;
+        Vector3 position;
+        if (worldDirector != null && worldDirector.HasUpcomingTurn && distance > worldDirector.UpcomingTurnDistance)
+        {
+            float turnDistance = worldDirector.UpcomingTurnDistance;
+            Vector3 pivot = trackForward * turnDistance;
+            Quaternion turn = Quaternion.AngleAxis(worldDirector.UpcomingTurnDirection * 90f, Vector3.up);
+            segmentForward = (turn * trackForward).normalized;
+            segmentRight = (turn * trackRight).normalized;
+            position = pivot + segmentForward * (distance - turnDistance) + segmentRight * lateral + Vector3.up * height;
+        }
+        else
+            position = trackForward * distance + trackRight * lateral + Vector3.up * height;
+
+        target.position = position;
+        target.rotation = Quaternion.LookRotation(segmentForward, Vector3.up) * baseRotation;
+    }
+
+    private static void SetCornerDecorationClearance(Transform cluster, int blockedSide)
+    {
+        for (int i = 0; i < cluster.childCount; i++)
+        {
+            Transform child = cluster.GetChild(i);
+            bool isLargeGroundDecoration = child.name == "Tree" || child.name == "Ruin";
+            if (!isLargeGroundDecoration) continue;
+            bool occupiesTurningSide = blockedSide == 2 || (blockedSide != 0 && Mathf.Sign(child.localPosition.x) == blockedSide);
+            child.gameObject.SetActive(!occupiesTurningSide);
+        }
+    }
+
     private void UpdateVehicle(float delta)
     {
         float targetX = targetLane * laneWidth;
-        float x = Mathf.SmoothDamp(car.position.x, targetX, ref laneVelocity, 0.095f, Mathf.Infinity, delta);
+        float currentLateral = Vector3.Dot(car.position, trackRight);
+        float x = Mathf.SmoothDamp(currentLateral, targetX, ref laneVelocity, 0.095f, Mathf.Infinity, delta);
         if (Mathf.Abs(x - targetX) < 0.03f) currentLane = targetLane;
 
         if (!IsGrounded || verticalVelocity > 0f)
@@ -598,10 +1077,13 @@ public sealed class JungleRunnerLevel : MonoBehaviour
         crouchRemaining = Mathf.Max(0f, crouchRemaining - delta);
         float crouch = IsCrouching ? 0.42f : 0f;
         float bob = IsGrounded && !IsCrouching ? Mathf.Sin(runTime * currentSpeed * 0.7f) * 0.025f : 0f;
-        car.position = new Vector3(x, CarBaseY + jumpHeight - crouch + bob, 0f);
+        car.position = trackRight * x + Vector3.up * (CarBaseY + jumpHeight - crouch + bob);
+        car.rotation = Quaternion.LookRotation(trackForward, Vector3.up);
         carBody.localRotation = Quaternion.Euler(IsGrounded ? Mathf.Sin(runTime * 9f) * 1.5f : -verticalVelocity * 1.2f, laneVelocity * -2f, 0f);
         spring.localScale = new Vector3(0.32f, IsCrouching ? 0.14f : IsGrounded ? 0.34f + bob : 0.62f, 0.32f);
+        boulder.position = -trackForward * 4.8f + Vector3.up * 1.55f;
         boulder.Rotate(Vector3.right, currentSpeed * 18f * delta, Space.Self);
+        UpdateCameraTurn(delta);
 
         bool visible = invulnerableRemaining <= 0f || ((int)(flashTimer * 12f) & 1) == 0;
         carBody.gameObject.SetActive(visible);
@@ -610,19 +1092,35 @@ public sealed class JungleRunnerLevel : MonoBehaviour
     private void UpdateWorld(float delta)
     {
         float movement = currentSpeed * delta;
-        float roadLoopLength = roadSegmentCount * roadSegmentLength;
-        float environmentLoopLength = environmentClusterCount * environmentClusterSpacing;
+        if (worldDirector != null) worldDirector.SetTrackFrame(Vector3.zero, trackForward);
+        if (worldDirector != null && worldDirector.Advance(movement, delta))
+        {
+            Die();
+            return;
+        }
+        if (worldDirector != null && worldDirector.TryConsumeTurnCommit(out int committedTurn))
+            CommitTurn(committedTurn);
         for (int i = 0; i < roadSegments.Count; i++)
         {
-            Transform road = roadSegments[i];
-            road.position += Vector3.back * movement;
-            if (road.position.z < -12f) road.position += Vector3.forward * roadLoopLength;
+            TrackVisual road = roadSegments[i];
+            road.distance -= movement;
+            if (road.distance < -12f) road.distance += road.loopLength;
+            ApplyTrackPose(road.transform, road.distance, road.lateral, road.height, road.baseRotation);
         }
         for (int i = 0; i < scrollingDecor.Count; i++)
         {
-            Transform decoration = scrollingDecor[i];
-            decoration.position += Vector3.back * movement;
-            if (decoration.position.z < -14f) decoration.position += Vector3.forward * environmentLoopLength;
+            TrackVisual decoration = scrollingDecor[i];
+            decoration.distance -= movement;
+            if (decoration.distance < -14f) decoration.distance += decoration.loopLength;
+            ApplyTrackPose(decoration.transform, decoration.distance, decoration.lateral, decoration.height, decoration.baseRotation);
+            int clearSide = 0;
+            if (decoration.environmentLayer == 0 && worldDirector != null && worldDirector.IsInsideTurnSafeZone(decoration.distance))
+                clearSide = 2;
+            if (decoration.clearedTurnSide != clearSide)
+            {
+                SetCornerDecorationClearance(decoration.transform, clearSide);
+                decoration.clearedTurnSide = clearSide;
+            }
         }
 
         if (!gameplayGenerationActive)
@@ -634,53 +1132,71 @@ public sealed class JungleRunnerLevel : MonoBehaviour
         }
 
         float farthestObstacle = 20f;
-        for (int i = 0; i < obstacles.Count; i++) farthestObstacle = Mathf.Max(farthestObstacle, obstacles[i].gameObject.transform.position.z);
+        for (int i = 0; i < obstacles.Count; i++) farthestObstacle = Mathf.Max(farthestObstacle, obstacles[i].distance);
         for (int i = 0; i < obstacles.Count; i++)
         {
             Obstacle obstacle = obstacles[i];
-            obstacle.gameObject.transform.position += Vector3.back * movement;
-            if (!obstacle.checkedCollision && obstacle.gameObject.transform.position.z < 1.15f && obstacle.gameObject.transform.position.z > -1.15f)
+            obstacle.distance -= movement;
+            if (worldDirector != null && worldDirector.IsInsideTurnSafeZone(obstacle.distance))
+            {
+                farthestObstacle = worldDirector.MoveOutsideTurnSafeZone(farthestObstacle + Random.Range(6.5f, 10.5f));
+                obstacle.distance = farthestObstacle;
+                ApplyTrackPose(obstacle.gameObject.transform, obstacle.distance, obstacle.lane * laneWidth, 0f, Quaternion.identity);
+                obstacle.checkedCollision = false;
+                continue;
+            }
+            if (obstacle.kind == ObstacleKind.Saw) obstacle.spin += 420f * delta;
+            else if (obstacle.kind == ObstacleKind.Rock) obstacle.spin -= 180f * delta;
+            Quaternion obstacleRotation = obstacle.kind == ObstacleKind.Saw
+                ? Quaternion.Euler(0f, obstacle.spin, 0f)
+                : obstacle.kind == ObstacleKind.Rock ? Quaternion.Euler(obstacle.spin, 0f, 0f) : Quaternion.identity;
+            ApplyTrackPose(obstacle.gameObject.transform, obstacle.distance, obstacle.lane * laneWidth, 0f, obstacleRotation);
+            if (!obstacle.checkedCollision && obstacle.distance < 1.15f && obstacle.distance > -1.15f)
             {
                 obstacle.checkedCollision = true;
                 CheckObstacle(obstacle);
             }
-            if (obstacle.kind == ObstacleKind.Saw) obstacle.gameObject.transform.Rotate(Vector3.up, 420f * delta);
-            if (obstacle.kind == ObstacleKind.Rock) obstacle.gameObject.transform.Rotate(Vector3.right, -180f * delta);
-            if (obstacle.gameObject.transform.position.z < -8f)
+            if (obstacle.distance < -8f)
             {
                 farthestObstacle += Random.Range(6.5f, 10.5f);
+                if (worldDirector != null) farthestObstacle = worldDirector.MoveOutsideTurnSafeZone(farthestObstacle);
                 obstacle.lane = Random.Range(-1, 2);
-                obstacle.gameObject.transform.position = new Vector3(obstacle.lane * laneWidth, 0f, farthestObstacle);
+                obstacle.distance = farthestObstacle;
+                ApplyTrackPose(obstacle.gameObject.transform, obstacle.distance, obstacle.lane * laneWidth, 0f, Quaternion.identity);
                 obstacle.checkedCollision = false;
             }
         }
 
         float farthestPickup = 16f;
-        for (int i = 0; i < pickups.Count; i++) farthestPickup = Mathf.Max(farthestPickup, pickups[i].gameObject.transform.position.z);
+        for (int i = 0; i < pickups.Count; i++) farthestPickup = Mathf.Max(farthestPickup, pickups[i].distance);
         for (int i = 0; i < pickups.Count; i++)
         {
             Pickup pickup = pickups[i];
             if (!pickup.collected)
             {
-                pickup.gameObject.transform.position += Vector3.back * movement;
-                pickup.gameObject.transform.Rotate(Vector3.up, 150f * delta, Space.World);
-                float zDistance = Mathf.Abs(pickup.gameObject.transform.position.z);
+                pickup.distance -= movement;
+                pickup.spin += 150f * delta;
+                ApplyTrackPose(pickup.gameObject.transform, pickup.distance, pickup.lane * laneWidth, pickup.baseY,
+                    Quaternion.Euler(0f, pickup.spin, 0f) * pickup.baseRotation);
+                float zDistance = Mathf.Abs(pickup.distance);
                 bool magnetized = pickup.kind == PickupKind.Coin && magnetRemaining > 0f && zDistance < 10f;
                 if (magnetized)
                 {
                     pickup.gameObject.transform.position = Vector3.MoveTowards(pickup.gameObject.transform.position, car.position + Vector3.up * 0.4f, 15f * delta);
                 }
-                if (zDistance < 0.9f && (magnetized || (Mathf.Abs(pickup.gameObject.transform.position.x - car.position.x) < 0.9f && Mathf.Abs(pickup.gameObject.transform.position.y - car.position.y) < 1.15f)))
+                float lateralDistance = Mathf.Abs(Vector3.Dot(pickup.gameObject.transform.position - car.position, trackRight));
+                if (zDistance < 0.9f && (magnetized || (lateralDistance < 0.9f && Mathf.Abs(pickup.gameObject.transform.position.y - car.position.y) < 1.15f)))
                     CollectPickup(pickup);
             }
-            if (pickup.collected || pickup.gameObject.transform.position.z < -7f)
+            if (pickup.collected || pickup.distance < -7f)
             {
                 farthestPickup += pickup.kind == PickupKind.Coin ? Random.Range(2.4f, 4.0f) : Random.Range(32f, 48f);
                 pickup.lane = Random.Range(-1, 2);
                 pickup.baseY = pickup.kind == PickupKind.Coin && Random.value > 0.75f ? 1.85f : 0.95f;
                 if (pickup.kind == PickupKind.Coin)
                     farthestPickup = FindSafeCoinZ(farthestPickup, pickup.lane);
-                pickup.gameObject.transform.position = new Vector3(pickup.lane * laneWidth, pickup.baseY, farthestPickup);
+                pickup.distance = farthestPickup;
+                ApplyTrackPose(pickup.gameObject.transform, pickup.distance, pickup.lane * laneWidth, pickup.baseY, Quaternion.identity);
                 pickup.collected = false;
                 pickup.gameObject.SetActive(true);
             }
@@ -689,7 +1205,8 @@ public sealed class JungleRunnerLevel : MonoBehaviour
 
     private void CheckObstacle(Obstacle obstacle)
     {
-        if (Mathf.Abs(obstacle.gameObject.transform.position.x - car.position.x) > 1.0f) return;
+        float lateralDistance = Mathf.Abs(Vector3.Dot(obstacle.gameObject.transform.position - car.position, trackRight));
+        if (lateralDistance > 1.0f) return;
         bool avoided = obstacle.kind == ObstacleKind.OverheadLog ? IsCrouching : (obstacle.kind == ObstacleKind.Root || obstacle.kind == ObstacleKind.Spikes || obstacle.kind == ObstacleKind.Saw) && jumpHeight > 0.72f;
         if (avoided || invulnerableRemaining > 0f) return;
         if (shieldRemaining > 0f)
@@ -725,7 +1242,7 @@ public sealed class JungleRunnerLevel : MonoBehaviour
             for (int i = 0; i < obstacles.Count; i++)
             {
                 Obstacle obstacle = obstacles[i];
-                if (obstacle.lane == lane && Mathf.Abs(obstacle.gameObject.transform.position.z - desiredZ) < 2.5f)
+                if (obstacle.lane == lane && Mathf.Abs(obstacle.distance - desiredZ) < 2.5f)
                 {
                     overlapsObstacle = true;
                     break;
@@ -775,7 +1292,11 @@ public sealed class JungleRunnerLevel : MonoBehaviour
         currentLane = targetLane = 0;
         car.position = new Vector3(0f, CarBaseY, 0f);
         for (int i = 0; i < obstacles.Count; i++)
-            if (obstacles[i].gameObject.transform.position.z < 12f) obstacles[i].gameObject.transform.position += Vector3.forward * 24f;
+            if (obstacles[i].distance < 12f)
+            {
+                obstacles[i].distance += 24f;
+                ApplyTrackPose(obstacles[i].gameObject.transform, obstacles[i].distance, obstacles[i].lane * laneWidth, 0f, Quaternion.identity);
+            }
         StartCountdown();
     }
 

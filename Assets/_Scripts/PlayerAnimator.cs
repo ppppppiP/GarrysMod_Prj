@@ -22,6 +22,11 @@ public class PlayerAnimator : MonoBehaviour
         // Получение входных данных для движения
         float moveZ = Input.GetAxisRaw("Vertical");
         float moveX = Input.GetAxisRaw("Horizontal");
+        if (playerController != null)
+        {
+            moveX += playerController.MobileMoveInput.x;
+            moveZ += playerController.MobileMoveInput.y;
+        }
         bool isMoving = moveZ != 0 || moveX != 0;
 
         // Батуты вызывают PlayerController.Jump из физического события, поэтому

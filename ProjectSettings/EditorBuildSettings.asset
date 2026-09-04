@@ -32,6 +32,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/Chips/7 - JUNGLE RUN.unity
     guid: e2fe00db15be99241b8ab594898a0690
+  - enabled: 1
+    path: Assets/_Scenes/Chips/8 - ANCIENT TRAP HALL.unity
+    guid: 056d95408f806bf438229c64d3380319
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: e1df9200bdd9b40508eb908c6b3fde6b,
       type: 2}

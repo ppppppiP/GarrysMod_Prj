@@ -13,8 +13,11 @@ public class PlayerController : MonoBehaviour
 
     private CharacterController characterController;
     private Vector3 velocity;
+    private Vector2 mobileMoveInput;
+    private bool mobileJumpQueued;
     public bool isGrounded;
     public bool isHided;
+    public Vector2 MobileMoveInput => mobileMoveInput;
     public static PlayerController instance;
     BaffController baffController;
 
@@ -26,6 +29,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         characterController = GetComponent<CharacterController>();
+        if (m_cameraTransform == null && Camera.main != null) m_cameraTransform = Camera.main.transform;
     }
 
     void Update()
@@ -36,8 +40,11 @@ public class PlayerController : MonoBehaviour
             velocity.y = -2f;
         }
 
-        float moveX = Input.GetAxis("Horizontal");
-        float moveZ = Input.GetAxis("Vertical");
+        float moveX = Mathf.Clamp(Input.GetAxis("Horizontal") + mobileMoveInput.x, -1f, 1f);
+        float moveZ = Mathf.Clamp(Input.GetAxis("Vertical") + mobileMoveInput.y, -1f, 1f);
+
+        if (m_cameraTransform == null && Camera.main != null) m_cameraTransform = Camera.main.transform;
+        if (m_cameraTransform == null) return;
 
         Vector3 forward = m_cameraTransform.forward;
         Vector3 right = m_cameraTransform.right;
@@ -67,10 +74,11 @@ public class PlayerController : MonoBehaviour
             characterController.Move(moveDirection * m_MoveSpeed * airMultiplier * Time.deltaTime);
         }
 
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if ((Input.GetButtonDown("Jump") || mobileJumpQueued) && isGrounded)
         {
             Jump(m_jumpForce);
         }
+        mobileJumpQueued = false;
 
         velocity.y += m_gravity * Time.deltaTime;
         characterController.Move(velocity * Time.deltaTime);
@@ -78,7 +86,23 @@ public class PlayerController : MonoBehaviour
 
     public void Jump(float force)
     {
-        CameraEffects.instance.DoJumpFov();
+        if (CameraEffects.instance != null) CameraEffects.instance.DoJumpFov();
         velocity.y = Mathf.Sqrt(force * -2f * m_gravity);
+    }
+
+    public void SetMobileHorizontal(float value) { mobileMoveInput.x = Mathf.Clamp(value, -1f, 1f); }
+    public void SetMobileVertical(float value) { mobileMoveInput.y = Mathf.Clamp(value, -1f, 1f); }
+    public void RequestMobileJump()
+    {
+        mobileJumpQueued = true;
+        PlayerAnimator playerAnimator = GetComponent<PlayerAnimator>();
+        if (playerAnimator != null) playerAnimator.NotifyJump();
+    }
+
+    public void ResetMotion()
+    {
+        velocity = Vector3.zero;
+        mobileMoveInput = Vector2.zero;
+        mobileJumpQueued = false;
     }
 }
