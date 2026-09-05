@@ -259,6 +259,93 @@ Transform:
   m_Children: []
   m_Father: {fileID: 670311245}
   m_LocalEulerAnglesHint: {x: 14.549, y: -102.895, z: 0}
+--- !u!1 &312221833
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 312221834}
+  - component: {fileID: 312221835}
+  m_Layer: 0
+  m_Name: Environment Generator (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &312221834
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312221833}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1903794679}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &312221835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312221833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b3b51808584cd94b83a1c9c73e61bad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::JungleEnvironmentGenerator
+  clusterCount: 20
+  clusterSpacing: 6.31
+  minimumDistanceFromCenter: 14
+  maximumDistanceFromCenter: 24
+  treeRoadEdgeClearance: 2.5
+  treesPerSide: 1
+  minimumTreeScale: 2
+  maximumTreeScale: 3.2
+  forwardJitter: 3
+  randomizeTreeRotation: 1
+  ruinSpawnChance: 0.35
+  minimumRuinsPerCluster: 1
+  maximumRuinsPerCluster: 2
+  minimumRuinDistanceFromCenter: 5.5
+  maximumRuinDistanceFromCenter: 9
+  ruinForwardJitter: 4
+  minimumRuinScale: 0.85
+  maximumRuinScale: 1.25
+  ruinHeightOffset: 0
+  randomizeRuinRotation: 1
+  vinePrefab: {fileID: 8215416046930949103, guid: 7eb06a2c554788e4e81c028b01675d17,
+    type: 3}
+  vineSpawnChance: 0.18
+  vineHeight: 15
+  vineHeightVariation: 2
+  vineSag: 8
+  vineSagVariation: 3
+  vineEndpointExtension: 6
+  vineDepthVariation: 18
+  vineEndHeightVariation: 2
+  vineWidth: 0.055
+  vineCurveSegments: 12
+  vineSideWave: 0.55
+  doubleVineChance: 0.28
+  brokenVineChance: 0.18
+  vineLeavesChance: 0.75
+  vineLeafCount: 3
+  doubleVineOffset: 0.55
+  brokenVineGap: 0.18
+  treePrefab: {fileID: 4034663162396099813, guid: 33f27a0467f825043b19708b1a349ba8,
+    type: 3}
+  ruinPrefab: {fileID: 0}
+  boulderPrefab: {fileID: 0}
 --- !u!1 &411171247
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,6 +448,8 @@ MonoBehaviour:
   roadSegmentLength: 8
   roadSegmentPrefab: {fileID: 7519143537767782745, guid: 9ac52ea6f9d74054ba116f2fa6fe9a66,
     type: 3}
+  roadTexture: {fileID: 2800000, guid: f14d5c48b6aedf1439e1c157623f25f2, type: 3}
+  roadTextureTiling: {x: 1, y: 1}
   obstacleCount: 10
   coinCount: 18
   obstacleSpacing: 8.5
@@ -750,7 +839,7 @@ PrefabInstance:
     - target: {fileID: 8315974890103521591, guid: 2eb359ee01041cc449cf030619406f2c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 7.000183
+      value: 7.000122
       objectReference: {fileID: 0}
     - target: {fileID: 8768100117121205251, guid: 2eb359ee01041cc449cf030619406f2c,
         type: 3}
@@ -889,9 +978,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b3b51808584cd94b83a1c9c73e61bad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::JungleEnvironmentGenerator
-  clusterCount: 8
-  clusterSpacing: 10
-  treePrefab: {fileID: 5107671052605905654, guid: 006703c8953ec5246b68c737ceb2b18e,
+  clusterCount: 57
+  clusterSpacing: 6.31
+  minimumDistanceFromCenter: 5.2
+  maximumDistanceFromCenter: 8
+  treeRoadEdgeClearance: 2.5
+  treesPerSide: 1
+  minimumTreeScale: 0.9
+  maximumTreeScale: 1.15
+  forwardJitter: 2.5
+  randomizeTreeRotation: 1
+  ruinSpawnChance: 0.069
+  minimumRuinsPerCluster: 1
+  maximumRuinsPerCluster: 2
+  minimumRuinDistanceFromCenter: 5.5
+  maximumRuinDistanceFromCenter: 9
+  ruinForwardJitter: 4
+  minimumRuinScale: 0.85
+  maximumRuinScale: 1.25
+  ruinHeightOffset: 0
+  randomizeRuinRotation: 1
+  vinePrefab: {fileID: 8215416046930949103, guid: 7eb06a2c554788e4e81c028b01675d17,
+    type: 3}
+  vineSpawnChance: 0
+  vineHeight: 5.2
+  vineHeightVariation: 0.65
+  vineSag: 1.25
+  vineSagVariation: 0.65
+  vineEndpointExtension: 6
+  vineDepthVariation: 10
+  vineEndHeightVariation: 1.2
+  vineWidth: 0.055
+  vineCurveSegments: 12
+  vineSideWave: 0.55
+  doubleVineChance: 0.28
+  brokenVineChance: 0.18
+  vineLeavesChance: 0.35
+  vineLeafCount: 3
+  doubleVineOffset: 0.55
+  brokenVineGap: 0.18
+  treePrefab: {fileID: 4034663162396099813, guid: 33f27a0467f825043b19708b1a349ba8,
     type: 3}
   ruinPrefab: {fileID: 6525722431984300535, guid: 5c5f347ddac2ed4439d49400fa6a9bde,
     type: 3}
@@ -922,6 +1048,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1903794679}
   - component: {fileID: 1903794678}
+  - component: {fileID: 1903794680}
+  - component: {fileID: 1903794681}
   m_Layer: 0
   m_Name: Jungle Runner Level
   m_TagString: Untagged
@@ -944,9 +1072,10 @@ MonoBehaviour:
   startSpeed: 9
   acceleration: 0.16
   maximumSpeed: 22
-  targetFrameRate: 120
   enableFog: 1
   enableRealtimeShadows: 0
+  worldBend: {fileID: 1903794680}
+  worldDirector: {fileID: 1903794681}
   roadGenerator: {fileID: 499892627}
   environmentGenerator: {fileID: 1528239471}
   hud: {fileID: 1257073128}
@@ -976,6 +1105,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  cameraTurnDuration: 0.28
 --- !u!4 &1903794679
 Transform:
   m_ObjectHideFlags: 0
@@ -991,10 +1121,125 @@ Transform:
   m_Children:
   - {fileID: 499892628}
   - {fileID: 1528239472}
+  - {fileID: 312221834}
   - {fileID: 1257073129}
   - {fileID: 122436338}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1903794680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903794677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5a6a5403370707448d594f806fe07ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::JungleWorldBend
+  bendEnabled: 1
+  bendOrigin: {fileID: 0}
+  verticalCurvature: -0.0055
+  horizontalCurvature: 0
+  startDistance: 4
+  maximumDistance: 120
+  sideInwardCurvature: 0
+  sideVerticalCurvature: 0.0043
+  sideStartDistance: 0.06
+  maximumSideDistance: 155
+  mobileShader: {fileID: 4800000, guid: a9eed236a2891c94a9a4e7f113f65a29, type: 3}
+--- !u!114 &1903794681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903794677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41c025f4e3ae57e4580206658f187723, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::JungleWorldDirector
+  zones:
+  - displayName: "\u0413\u0443\u0441\u0442\u044B\u0435 \u0434\u0436\u0443\u043D\u0433\u043B\u0438"
+    type: 0
+    length: 76
+    treeDensityMultiplier: 1.25
+    ruinChanceMultiplier: 0.35
+    vineChanceMultiplier: 1.2
+    nearTint: {r: 0.88, g: 1, b: 0.86, a: 1}
+    farFogColor: {r: 0.24, g: 0.55, b: 0.34, a: 1}
+    ambientColor: {r: 0.34, g: 0.46, b: 0.3, a: 1}
+    sunColor: {r: 1, g: 0.88, b: 0.63, a: 1}
+    sunIntensity: 1.15
+  - displayName: "\u0417\u0430\u0440\u043E\u0441\u0448\u0438\u0435 \u0440\u0443\u0438\u043D\u044B"
+    type: 1
+    length: 70
+    treeDensityMultiplier: 0.75
+    ruinChanceMultiplier: 2.4
+    vineChanceMultiplier: 0.8
+    nearTint: {r: 0.96, g: 0.98, b: 0.83, a: 1}
+    farFogColor: {r: 0.55, g: 0.58, b: 0.34, a: 1}
+    ambientColor: {r: 0.42, g: 0.42, b: 0.28, a: 1}
+    sunColor: {r: 1, g: 0.78, b: 0.48, a: 1}
+    sunIntensity: 1.2
+  - displayName: "\u0411\u0438\u0440\u044E\u0437\u043E\u0432\u043E\u0435 \u0431\u043E\u043B\u043E\u0442\u043E"
+    type: 2
+    length: 68
+    treeDensityMultiplier: 0
+    ruinChanceMultiplier: 0.55
+    vineChanceMultiplier: 1.45
+    nearTint: {r: 0.78, g: 1, b: 0.91, a: 1}
+    farFogColor: {r: 0.18, g: 0.58, b: 0.56, a: 1}
+    ambientColor: {r: 0.24, g: 0.42, b: 0.38, a: 1}
+    sunColor: {r: 0.76, g: 1, b: 0.82, a: 1}
+    sunIntensity: 0.9
+  - displayName: "\u0414\u043E\u043B\u0438\u043D\u0430 \u0432\u043E\u0434\u043E\u043F\u0430\u0434\u043E\u0432"
+    type: 3
+    length: 64
+    treeDensityMultiplier: 0
+    ruinChanceMultiplier: 0.7
+    vineChanceMultiplier: 1.5
+    nearTint: {r: 0.86, g: 0.98, b: 1, a: 1}
+    farFogColor: {r: 0.34, g: 0.66, b: 0.72, a: 1}
+    ambientColor: {r: 0.34, g: 0.46, b: 0.48, a: 1}
+    sunColor: {r: 0.86, g: 0.95, b: 1, a: 1}
+    sunIntensity: 1.05
+  - displayName: "\u0414\u0440\u0435\u0432\u043D\u0438\u0439 \u0445\u0440\u0430\u043C"
+    type: 4
+    length: 78
+    treeDensityMultiplier: 0.45
+    ruinChanceMultiplier: 2.8
+    vineChanceMultiplier: 0.55
+    nearTint: {r: 1, g: 0.91, b: 0.73, a: 1}
+    farFogColor: {r: 0.62, g: 0.43, b: 0.24, a: 1}
+    ambientColor: {r: 0.46, g: 0.34, b: 0.23, a: 1}
+    sunColor: {r: 1, g: 0.68, b: 0.36, a: 1}
+    sunIntensity: 1.3
+  zoneTransitionDistance: 18
+  gradientStartDistance: 12
+  gradientEndDistance: 105
+  gradientStrength: 0.72
+  turnsEnabled: 1
+  minimumTurnSpacing: 180
+  maximumTurnSpacing: 300
+  turnWarningDistance: 58
+  turnInputDistance: 10
+  turnSafeRadius: 18
+  cornerTreePrefab: {fileID: 4034663162396099813, guid: 33f27a0467f825043b19708b1a349ba8,
+    type: 3}
+  cornerTreeCount: 10
+  cornerTreeDistance: 7.2
+  cornerTreeScaleRange: {x: 0.55, y: 1.05}
+  stagedEventsEnabled: 1
+  minimumEventSpacing: 180
+  maximumEventSpacing: 320
+  eventSpawnDistance: 68
+  fallingTreePrefab: {fileID: 0}
+  birdPrefab: {fileID: 0}
+  collapsingColumnPrefab: {fileID: 0}
+  waterfallPrefab: {fileID: 0}
 --- !u!1 &2005838181
 GameObject:
   m_ObjectHideFlags: 0
