@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.barkar.cg_tools": "https://github.com/BarkarIvan/com.barkar.cg_tools.git#feature/mesh-quantize",
     "com.coplaydev.unity-mcp": "https://github.com/CoplayDev/unity-mcp.git?path=/MCPForUnity#v10.0.0",
     "com.febucci.custom-hierarchy": "https://github.com/febucci/unitypackage-custom-hierarchy.git",
     "com.unity.addressables": "2.7.6",

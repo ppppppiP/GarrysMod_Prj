@@ -7,6 +7,15 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+    "com.barkar.cg_tools": {
+      "version": "https://github.com/BarkarIvan/com.barkar.cg_tools.git#feature/mesh-quantize",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.render-pipelines.universal": "17.3.0"
+      },
+      "hash": "b5d8ee01f445dfd00714c1fe4fbc513c6eefba01"
+    },
     "com.coplaydev.unity-mcp": {
       "version": "https://github.com/CoplayDev/unity-mcp.git?path=/MCPForUnity#v10.0.0",
       "depth": 0,

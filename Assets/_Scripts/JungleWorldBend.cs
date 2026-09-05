@@ -84,6 +84,11 @@ public sealed class JungleWorldBend : MonoBehaviour
             enableInstancing = true,
             hideFlags = HideFlags.DontSave
         };
+        if ((source.HasProperty("_MQQuantized") && source.GetFloat("_MQQuantized") > 0.5f) || source.IsKeywordEnabled("_MQ_QUANTIZED"))
+        {
+            curved.SetFloat("_MQQuantized", 1f);
+            curved.EnableKeyword("_MQ_QUANTIZED");
+        }
         curvedMaterials[source] = curved;
         return curved;
     }

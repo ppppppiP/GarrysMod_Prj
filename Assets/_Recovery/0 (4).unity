@@ -342,7 +342,7 @@ MonoBehaviour:
   vineLeafCount: 3
   doubleVineOffset: 0.55
   brokenVineGap: 0.18
-  treePrefab: {fileID: 1191526240698296229, guid: e346e8457f0969d44b9bfede392d46a9,
+  treePrefab: {fileID: 4034663162396099813, guid: 33f27a0467f825043b19708b1a349ba8,
     type: 3}
   ruinPrefab: {fileID: 0}
   boulderPrefab: {fileID: 0}
@@ -839,7 +839,7 @@ PrefabInstance:
     - target: {fileID: 8315974890103521591, guid: 2eb359ee01041cc449cf030619406f2c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 7.000183
+      value: 7.000122
       objectReference: {fileID: 0}
     - target: {fileID: 8768100117121205251, guid: 2eb359ee01041cc449cf030619406f2c,
         type: 3}
@@ -1017,7 +1017,7 @@ MonoBehaviour:
   vineLeafCount: 3
   doubleVineOffset: 0.55
   brokenVineGap: 0.18
-  treePrefab: {fileID: 1191526240698296229, guid: e346e8457f0969d44b9bfede392d46a9,
+  treePrefab: {fileID: 4034663162396099813, guid: 33f27a0467f825043b19708b1a349ba8,
     type: 3}
   ruinPrefab: {fileID: 6525722431984300535, guid: 5c5f347ddac2ed4439d49400fa6a9bde,
     type: 3}

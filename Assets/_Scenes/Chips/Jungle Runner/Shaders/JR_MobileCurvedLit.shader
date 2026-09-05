@@ -5,6 +5,7 @@ Shader "Jungle Runner/Mobile Curved Lit"
         [MainTexture] _BaseMap("Текстура", 2D) = "white" {}
         [MainColor] _BaseColor("Цвет", Color) = (1,1,1,1)
         [Toggle(_ALPHATEST_ON)] _AlphaClip("Вырезать прозрачность", Float) = 0
+        [Toggle(_MQ_QUANTIZED)] _MQQuantized("Квантованные нормали", Float) = 0
         _Cutoff("Порог прозрачности", Range(0,1)) = 0.5
         [Enum(UnityEngine.Rendering.CullMode)] _Cull("Отсечение граней", Float) = 2
     }
@@ -28,9 +29,11 @@ Shader "Jungle Runner/Mobile Curved Lit"
             #pragma multi_compile_instancing
             #pragma multi_compile_fog
             #pragma shader_feature_local_fragment _ALPHATEST_ON
+            #pragma shader_feature_local_vertex _MQ_QUANTIZED
 
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
+            #include "Packages/com.barkar.cg_tools/ShaderLibrary/MeshQuantization.hlsl"
 
             TEXTURE2D(_BaseMap);
             SAMPLER(sampler_BaseMap);
@@ -54,6 +57,7 @@ Shader "Jungle Runner/Mobile Curved Lit"
             {
                 float4 positionOS : POSITION;
                 half3 normalOS : NORMAL;
+                half4 color : COLOR;
                 float2 uv : TEXCOORD0;
                 UNITY_VERTEX_INPUT_INSTANCE_ID
             };
@@ -92,7 +96,12 @@ Shader "Jungle Runner/Mobile Curved Lit"
                 float3 positionWS = TransformObjectToWorld(input.positionOS.xyz);
                 positionWS = BendWorldPosition(positionWS);
                 output.positionCS = TransformWorldToHClip(positionWS);
-                output.normalWS = TransformObjectToWorldNormal(input.normalOS);
+                #if defined(_MQ_QUANTIZED)
+                    half3 normalOS = MQ_DecodeNormalFromColor(input.color);
+                #else
+                    half3 normalOS = input.normalOS;
+                #endif
+                output.normalWS = TransformObjectToWorldNormal(normalOS);
                 output.uv = TRANSFORM_TEX(input.uv, _BaseMap);
                 output.fogFactor = ComputeFogFactor(output.positionCS.z);
                 output.viewDistance = distance(_WorldSpaceCameraPos, positionWS);
